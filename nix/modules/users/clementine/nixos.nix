@@ -30,12 +30,6 @@
           user = "clementine";
         };
       };
-      services = {
-        tailscale = {
-          enable = true;
-          useRoutingFeatures = "client";
-        };
-      };
       users = {
         groups.clementine = {
           gid = 2026;

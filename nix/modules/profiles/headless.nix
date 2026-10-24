@@ -93,6 +93,7 @@
       };
       networking = {
         dhcpcd.enable = false;
+        firewall.trustedInterfaces = ["tailscale0"];
         networkmanager.enable = lib.mkForce false;
         nftables.enable = true;
         useDHCP = false;
@@ -227,6 +228,11 @@
         resolved = {
           enable = true;
           settings.Resolve.LLMNR = "false";
+        };
+        tailscale = {
+          enable = true;
+          openFirewall = true;
+          useRoutingFeatures = "client";
         };
       };
       system = {

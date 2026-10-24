@@ -13,12 +13,6 @@
         user = "aude";
       };
     };
-    services = {
-      tailscale = {
-        enable = true;
-        useRoutingFeatures = "client";
-      };
-    };
     users = {
       groups.aude = {
         gid = 1220;

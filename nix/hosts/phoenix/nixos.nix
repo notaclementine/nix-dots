@@ -16,7 +16,7 @@
       ];
       cores = 4;
       http-connections = 100;
-      max-jobs = 2;
+      max-jobs = 4;
       secret-key-files = [config.security.nix-secrets.secrets."nix-cache-key".path];
     };
     programs.nh.flake = "/persistent/dotfiles";

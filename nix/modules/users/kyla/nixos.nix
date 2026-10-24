@@ -13,12 +13,6 @@
         user = "kyla";
       };
     };
-    services = {
-      tailscale = {
-        enable = true;
-        useRoutingFeatures = "client";
-      };
-    };
     users = {
       groups.kyla = {
         gid = 2001;

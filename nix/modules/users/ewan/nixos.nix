@@ -14,12 +14,6 @@
       };
     };
     programs.ydotool.enable = true;
-    services = {
-      tailscale = {
-        enable = true;
-        useRoutingFeatures = "client";
-      };
-    };
     users = {
       groups.ewan = {
         gid = 2000;
