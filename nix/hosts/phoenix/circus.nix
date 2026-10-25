@@ -36,7 +36,7 @@
           force_secure_cookies = true;
         };
         queue_runner = {
-          build_timeout = 10000;
+          build_timeout = 15000;
           workers = 2;
         };
         evaluator = {
