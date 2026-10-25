@@ -56,9 +56,6 @@ clementine = "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29
 # nixpkgs
 [inputs.nixpkgs]
 url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
-patches = [
-"https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/576564.patch"
-]
 
 # manic systems + rafware <3
 [inputs.circus]

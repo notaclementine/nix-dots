@@ -21,9 +21,9 @@
     "type": "github",
     "owner": "nix-community",
     "repo": "nixos-apple-silicon",
-    "rev": "b33a26ae250666760abceb0634b5a22440244f6b",
-    "narHash": "sha256-bmrkql7Lmnm+Te57Iio4cPvauZCX4Q7gWStHPhQKo1Q=",
-    "lastModified": 1792748866
+    "rev": "46e80bc641f5aaee6ed7ef90a12314a81492f48f",
+    "narHash": "sha256-MK6/UsOv1Ii71c+2U28GpmKn+Fm4MZG2TmIscuvUERw=",
+    "lastModified": 1792772387
   },
   "circus": {
     "type": "github",
@@ -101,37 +101,24 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "nixos-core",
-    "rev": "ea3d43aab1da4ab847065d50892c774904aa492d",
-    "narHash": "sha256-4XPY3uV0guJjLwzQb2wbio448zKfgkaH3dEh7ui2Bxg=",
-    "lastModified": 1792210974
+    "rev": "13d9c52c1ea8275e5c5b99878f96a8435bebad9f",
+    "narHash": "sha256-zWTz3A7cZyjCV8a9z/d20cDborKQgt+2YfDLIsnZkVQ=",
+    "lastModified": 1792822547
   },
   "nixpkgs": {
     "type": "tarball",
-    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1097682.02c087f3fe67/nixexprs.tar.zst?rev=02c087f3fe673c9e317f206a627cb6b910336dbe&lastModified=1792502884",
-    "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
-    "narHash": "sha256-ij8QUxzTOHovLrNOxVRx+RAhGQFOMsJbji0veiatH5k=",
-    "lastModified": 1792502884,
-    "patched": {
-      "path": "/nix/store/iy2fmi7xqqccc5iwpmfq8ivjzl4zb8yq-source",
-      "narHash": "sha256-Zo6v3XnxgR7j1RKxsTvaemhDM8WTpytWZV5n0CxLisE=",
-      "lastModified": 1792502884,
-      "patches": [
-        {
-          "source": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/576564.patch",
-          "url": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/576564.patch",
-          "file": "patches/nixpkgs/576564.patch",
-          "sha256": "ab144f93c19114c36311492aefe5e6f4f20ef8d23dab66df5de9c5b223394e4c"
-        }
-      ]
-    }
+    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1100280.3ec636362e18/nixexprs.tar.zst?rev=3ec636362e1816bc2f0888fa0fa2c69f1bc9e504&lastModified=1792773339",
+    "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+    "narHash": "sha256-17eNBI5Khe4JZaRkL5hRGPWf8MZ6qv+bWAr4V8YeKBw=",
+    "lastModified": 1792773339
   },
   "nvf": {
     "type": "github",
     "owner": "notashelf",
     "repo": "nvf",
-    "rev": "1d1a8c826837858404292e9336977f0d9131fb9b",
-    "narHash": "sha256-tQPke0OIaFboQjxQPJL7a+pNzH1ZH1qQif046uo9Rf4=",
-    "lastModified": 1792450766
+    "rev": "557d2eb05a76e5939e6a75351343cae5731a71f8",
+    "narHash": "sha256-xpH3z+T5NELixXRjxGJ3mx30kz63Xt2B0ZfPWl7hcUg=",
+    "lastModified": 1792889789
   },
   "super-secret": {
     "type": "github",
