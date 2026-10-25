@@ -207,7 +207,15 @@
       };
     };
     system = {
-      nixos-core.enable = true;
+      nixos-core = {
+        enable = true;
+        components = {
+          bootStage1.enable = false;
+          extraUtilsCommand.enable = false;
+          initialRamdisk.enable = false;
+          nixosInitCompat.enable = true;
+        };
+      };
       stateVersion = "25.11";
       tools = {
         nixos-rebuild.enable = false;
