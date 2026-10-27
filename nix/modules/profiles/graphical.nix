@@ -98,21 +98,29 @@
         virtualisation.memorySize = 10240;
       };
     };
-    xdg.mime.defaultApplications = {
-      "application/pdf" = "firefox.desktop";
-      "text/html" = "firefox.desktop";
-      "video/mp4" = "mpv.desktop";
-      "video/mpeg" = "mpv.desktop";
-      "video/quicktime" = "mpv.desktop";
-      "video/webm" = "mpv.desktop";
-      "video/x-flv" = "mpv.desktop";
-      "video/x-matroska" = "mpv.desktop";
-      "video/x-msvideo" = "mpv.desktop";
-      "x-scheme-handler/about" = "firefox.desktop";
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/terminal" = "kitty.desktop";
-      "x-scheme-handler/unknown" = "firefox.desktop";
+    xdg = {
+      mime.defaultApplications = {
+        "application/pdf" = "firefox.desktop";
+        "text/html" = "firefox.desktop";
+        "video/mp4" = "mpv.desktop";
+        "video/mpeg" = "mpv.desktop";
+        "video/quicktime" = "mpv.desktop";
+        "video/webm" = "mpv.desktop";
+        "video/x-flv" = "mpv.desktop";
+        "video/x-matroska" = "mpv.desktop";
+        "video/x-msvideo" = "mpv.desktop";
+        "x-scheme-handler/about" = "firefox.desktop";
+        "x-scheme-handler/http" = "firefox.desktop";
+        "x-scheme-handler/https" = "firefox.desktop";
+        "x-scheme-handler/terminal" = "kitty.desktop";
+        "x-scheme-handler/unknown" = "firefox.desktop";
+      };
+      terminal-exec = {
+        enable = true;
+        settings.default = [
+          "kitty.desktop"
+        ];
+      };
     };
   };
 }
