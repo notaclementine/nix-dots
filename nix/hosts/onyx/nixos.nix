@@ -92,6 +92,7 @@
         enable = true;
         memoryPercent = 25;
       };
+      hardware.bluetooth.enable = true;
     }
   );
 }
