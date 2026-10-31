@@ -95,9 +95,6 @@ url = "github:hercules-ci/flake-parts"
 url = "github:snugnug/hjem-rum"
 [inputs.lix]
 url = "git+https://git.lix.systems/lix-project/lix"
-type = "fetch"
-[inputs.lix-module]
-url = "git+https://git.lix.systems/lix-project/nixos-module"
 [inputs.nix-secrets]
 url = "github:unnamed-systems/nix-secrets"
 [inputs.wsl]
