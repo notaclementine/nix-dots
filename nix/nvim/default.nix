@@ -72,7 +72,6 @@
           extensions.roslyn-nvim = {
             enable = true;
             setupOpts = {
-              extensions.razor.enabled = false;
               filewatching = "off";
             };
           };
@@ -121,20 +120,6 @@
       undoFile.enable = true;
       viAlias = true;
       vimAlias = true;
-      # remove annoying C# yellow warnings
-      luaConfigRC.notify-filter =
-        /*
-        lua
-        */
-        ''
-          local orig_notify = vim.notify
-          vim.notify = function(msg, level, opts)
-              if type(msg) == "string" and (msg:find("roslyn.nvim extensions is deprecated") or msg:find("roslyn.lua:9:")) then
-                  return
-              end
-              orig_notify(msg, level, opts)
-          end
-        '';
     };
   };
 }
