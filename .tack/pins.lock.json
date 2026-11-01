@@ -12,6 +12,7 @@
     "nixos-core": "github:manic-systems/nixos-core",
     "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
     "nvf": "github:notashelf/nvf",
+    "rom": "github:manic-systems/rom",
     "super-secret": "github:notaclementine/secrets",
     "tack": "github:manic-systems/tack",
     "wsl": "github:nix-community/NixOS-WSL"
@@ -110,6 +111,14 @@
     "rev": "0ae8788d14334c9dd4bcd68d951bee661b00ad87",
     "narHash": "sha256-hH7rK3yF7lMdrJYqF9cZbGheq8qNPgCYJDsfJovh7UY=",
     "lastModified": 1793152231
+  },
+  "rom": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "rom",
+    "rev": "f6ae054a7dcabd8c7fa3638dc96d4669ffe7a990",
+    "narHash": "sha256-DDoke7/RqXX/1ccS3No2DnkXo8Im8eokrGZyCDayHlk=",
+    "lastModified": 1793567976
   },
   "super-secret": {
     "type": "github",

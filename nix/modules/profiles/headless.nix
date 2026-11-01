@@ -27,6 +27,7 @@
           NH_ELEVATION_STRATEGY = "run0";
         };
         systemPackages = with pkgs; [
+          inputs'.rom.packages.default
           age-plugin-fido2-hmac
           alejandra
           atool

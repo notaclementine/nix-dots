@@ -73,6 +73,9 @@ group = "mania"
 [inputs.nvf]
 url = "github:notashelf/nvf"
 group = "mania"
+[inputs.rom]
+url = "github:manic-systems/rom"
+group = "mania"
 [inputs.tack]
 url = "github:manic-systems/tack"
 group = "mania"
