@@ -7,7 +7,6 @@
     "hjem": "github:feel-co/hjem",
     "hjem-rum": "github:snugnug/hjem-rum",
     "lix": "git+https://git.lix.systems/lix-project/lix",
-    "lix-module": "git+https://git.lix.systems/lix-project/nixos-module",
     "ncro": "github:manic-systems/ncro",
     "nix-secrets": "github:unnamed-systems/nix-secrets",
     "nixos-core": "github:manic-systems/nixos-core",
@@ -21,9 +20,9 @@
     "type": "github",
     "owner": "nix-community",
     "repo": "nixos-apple-silicon",
-    "rev": "d1c6dceab53552d38ba8a4d8f3b993258d7e62f9",
-    "narHash": "sha256-hFbp1c2erEUmTdT4riiUDGzLY3n4POWbrCK5TuEtBQw=",
-    "lastModified": 1793400928
+    "rev": "ed8b3263d1d78ecb1fa5a0640eb3f139bbe86eab",
+    "narHash": "sha256-qo68Efei35KLsd7dp1nHY/O+bEPLqvaHXgHNSm3/wgI=",
+    "lastModified": 1793476745
   },
   "circus": {
     "type": "github",
@@ -72,14 +71,6 @@
     "rev": "3c4698152e8d6b72cff7b7f52ae68f69a80a4dab",
     "narHash": "sha256-h9cN4IDbeHIECDlcO+t+0RFYhMEwMGM3Cnp50JFKMpo=",
     "lastModified": 1793270313
-  },
-  "lix-module": {
-    "type": "git",
-    "url": "https://git.lix.systems/lix-project/nixos-module",
-    "ref": "HEAD",
-    "rev": "9311ca94aac0ff3378ab4eea887284d11de94158",
-    "narHash": "sha256-7KBL8PF28zweSpAAb62Dxo1oznqGUiXLu4807aAFw4s=",
-    "lastModified": 1791014283
   },
   "ncro": {
     "type": "github",

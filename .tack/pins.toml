@@ -60,23 +60,22 @@ url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
 # manic systems + rafware <3
 [inputs.circus]
 url = "github:manic-systems/circus"
-group = "rafware"
-exclude_follow = ["nixpkgs"]
-[inputs.ncro]
-url = "github:manic-systems/ncro"
-group = "rafware"
-[inputs.nixos-core]
-url = "github:manic-systems/nixos-core"
-group = "rafware"
-[inputs.tack]
-url = "github:manic-systems/tack"
-group = "rafware"
-[inputs.nvf]
-url = "github:notashelf/nvf"
-group = "rafware"
+group = "mania"
 [inputs.hjem]
 url = "github:feel-co/hjem"
-group = "rafware"
+group = "mania"
+[inputs.ncro]
+url = "github:manic-systems/ncro"
+group = "mania"
+[inputs.nixos-core]
+url = "github:manic-systems/nixos-core"
+group = "mania"
+[inputs.nvf]
+url = "github:notashelf/nvf"
+group = "mania"
+[inputs.tack]
+url = "github:manic-systems/tack"
+group = "mania"
 
 # my stuff
 [inputs.super-secret]
