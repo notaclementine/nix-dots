@@ -3,6 +3,7 @@
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
     "circus": "github:manic-systems/circus",
     "disko": "github:nix-community/disko",
+    "dix": "github:manic-systems/dix",
     "flake-parts": "github:hercules-ci/flake-parts",
     "hjem": "github:feel-co/hjem",
     "hjem-rum": "github:snugnug/hjem-rum",
@@ -39,6 +40,14 @@
     "rev": "cedd626e11b635470fa6f9fdb8ad79b0075dd7f9",
     "narHash": "sha256-3hSJlv8mUVnZPMWK2+CM7a9O+nR6Z4mCh27NfLCmTPc=",
     "lastModified": 1792526520
+  },
+  "dix": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "dix",
+    "rev": "0170c3c694f9c990a3921057cf2cedf3f876edd7",
+    "narHash": "sha256-k00DdgQoYa+vM4iqa961Ax/GWuqRVb8yVRtBDzXiib4=",
+    "lastModified": 1793616122
   },
   "flake-parts": {
     "type": "github",

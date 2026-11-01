@@ -61,6 +61,9 @@ url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
 [inputs.circus]
 url = "github:manic-systems/circus"
 group = "mania"
+[inputs.dix]
+url = "github:manic-systems/dix"
+group = "mania"
 [inputs.hjem]
 url = "github:feel-co/hjem"
 group = "mania"
