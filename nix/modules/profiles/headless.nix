@@ -13,6 +13,7 @@
     }: {
       disabledModules = ["programs/tack.nix"];
       imports = [
+        inputs.cade.nixosModules.default
         inputs.hjem.nixosModules.default
         inputs.nix-secrets.nixosModules.default
         inputs.nixos-core.nixosModules.default
@@ -112,6 +113,11 @@
       nixpkgs.config.allowUnfree = true;
       programs = {
         bat.enable = true;
+        cade = {
+          enable = true;
+          verbosity = "quiet";
+          longRunningWarningMs = 50000;
+        };
         fish.enable = true;
         git.enable = true;
         gnupg.agent = {

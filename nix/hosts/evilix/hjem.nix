@@ -6,14 +6,6 @@
         remote-assets
       ];
       rum.programs = {
-        direnv = {
-          enable = true;
-          integrations = {
-            fish.enable = true;
-            nix-direnv.enable = true;
-          };
-        };
-        fish.enable = true;
         git = {
           settings = lib.mkForce {};
           ignore = ''

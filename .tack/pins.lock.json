@@ -1,6 +1,7 @@
 {
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
+    "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
     "disko": "github:nix-community/disko",
     "flake-parts": "github:hercules-ci/flake-parts",
@@ -23,6 +24,14 @@
     "rev": "ed8b3263d1d78ecb1fa5a0640eb3f139bbe86eab",
     "narHash": "sha256-qo68Efei35KLsd7dp1nHY/O+bEPLqvaHXgHNSm3/wgI=",
     "lastModified": 1793476745
+  },
+  "cade": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "cade",
+    "rev": "ee902c44750567241c3969703945c924a97bc9c4",
+    "narHash": "sha256-YTWz7Tqd8zJPfLRiAmcOPHHhq6xBJCKrjwdjFhRUyRA=",
+    "lastModified": 1793178999
   },
   "circus": {
     "type": "github",
