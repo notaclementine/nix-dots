@@ -1,8 +1,10 @@
 {
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
+    "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
     "disko": "github:nix-community/disko",
+    "dix": "github:manic-systems/dix",
     "flake-parts": "github:hercules-ci/flake-parts",
     "hjem": "github:feel-co/hjem",
     "hjem-rum": "github:snugnug/hjem-rum",
@@ -13,6 +15,7 @@
     "nixos-core": "github:manic-systems/nixos-core",
     "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
     "nvf": "github:notashelf/nvf",
+    "rom": "github:manic-systems/rom",
     "super-secret": "github:notaclementine/secrets",
     "tack": "github:manic-systems/tack",
     "wsl": "github:nix-community/NixOS-WSL"
@@ -24,6 +27,14 @@
     "rev": "ed8b3263d1d78ecb1fa5a0640eb3f139bbe86eab",
     "narHash": "sha256-qo68Efei35KLsd7dp1nHY/O+bEPLqvaHXgHNSm3/wgI=",
     "lastModified": 1793476745
+  },
+  "cade": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "cade",
+    "rev": "ee902c44750567241c3969703945c924a97bc9c4",
+    "narHash": "sha256-YTWz7Tqd8zJPfLRiAmcOPHHhq6xBJCKrjwdjFhRUyRA=",
+    "lastModified": 1793178999
   },
   "circus": {
     "type": "github",
@@ -40,6 +51,14 @@
     "rev": "cedd626e11b635470fa6f9fdb8ad79b0075dd7f9",
     "narHash": "sha256-3hSJlv8mUVnZPMWK2+CM7a9O+nR6Z4mCh27NfLCmTPc=",
     "lastModified": 1792526520
+  },
+  "dix": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "dix",
+    "rev": "0170c3c694f9c990a3921057cf2cedf3f876edd7",
+    "narHash": "sha256-k00DdgQoYa+vM4iqa961Ax/GWuqRVb8yVRtBDzXiib4=",
+    "lastModified": 1793616122
   },
   "flake-parts": {
     "type": "github",
@@ -119,6 +138,14 @@
     "rev": "0ae8788d14334c9dd4bcd68d951bee661b00ad87",
     "narHash": "sha256-hH7rK3yF7lMdrJYqF9cZbGheq8qNPgCYJDsfJovh7UY=",
     "lastModified": 1793152231
+  },
+  "rom": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "rom",
+    "rev": "f6ae054a7dcabd8c7fa3638dc96d4669ffe7a990",
+    "narHash": "sha256-DDoke7/RqXX/1ccS3No2DnkXo8Im8eokrGZyCDayHlk=",
+    "lastModified": 1793567976
   },
   "super-secret": {
     "type": "github",

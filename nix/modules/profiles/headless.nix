@@ -13,6 +13,7 @@
     }: {
       disabledModules = ["programs/tack.nix"];
       imports = [
+        inputs.cade.nixosModules.default
         inputs.hjem.nixosModules.default
         inputs.nix-secrets.nixosModules.default
         inputs.nixos-core.nixosModules.default
@@ -27,6 +28,8 @@
           NH_ELEVATION_STRATEGY = "run0";
         };
         systemPackages = with pkgs; [
+          inputs'.dix.packages.default
+          inputs'.rom.packages.default
           age-plugin-fido2-hmac
           alejandra
           atool
@@ -112,6 +115,11 @@
       nixpkgs.config.allowUnfree = true;
       programs = {
         bat.enable = true;
+        cade = {
+          enable = true;
+          verbosity = "quiet";
+          longRunningWarningMs = 50000;
+        };
         fish.enable = true;
         git.enable = true;
         gnupg.agent = {

@@ -58,8 +58,14 @@ clementine = "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29
 url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
 
 # manic systems + rafware <3
+[inputs.cade]
+url = "github:manic-systems/cade"
+group = "mania"
 [inputs.circus]
 url = "github:manic-systems/circus"
+group = "mania"
+[inputs.dix]
+url = "github:manic-systems/dix"
 group = "mania"
 [inputs.hjem]
 url = "github:feel-co/hjem"
@@ -75,6 +81,9 @@ url = "github:manic-systems/nixos-core"
 group = "mania"
 [inputs.nvf]
 url = "github:notashelf/nvf"
+group = "mania"
+[inputs.rom]
+url = "github:manic-systems/rom"
 group = "mania"
 [inputs.tack]
 url = "github:manic-systems/tack"
