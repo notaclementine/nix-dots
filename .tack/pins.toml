@@ -14,9 +14,11 @@ recomposable = true
 # all_follow maps input names at every depth to the top-level pin they follow
 # opt out per-input with exclude_follow, scope with flake: or tack:
 [all_follow]
+fenix = "fenix"
 hjem = "hjem"
 lix = "lix"
 nixpkgs = "nixpkgs"
+rust-analyzer-src = "rust-analyzer"
 
 # recursively omit selected upstream inputs from every top-level pin
 [omit_inputs]
