@@ -8,6 +8,7 @@
     "hjem-rum": "github:snugnug/hjem-rum",
     "lix": "git+https://git.lix.systems/lix-project/lix",
     "ncro": "github:manic-systems/ncro",
+    "nh": "github:nix-community/nh",
     "nix-secrets": "github:unnamed-systems/nix-secrets",
     "nixos-core": "github:manic-systems/nixos-core",
     "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
@@ -79,6 +80,14 @@
     "rev": "9f231aef9cb9e1ce8d892a69d3b8be2d33497967",
     "narHash": "sha256-ON8IV/K+GAEeVQi2+KfP5IQS3hzfptF40ggcF3Nz9jE=",
     "lastModified": 1793328236
+  },
+  "nh": {
+    "type": "github",
+    "owner": "nix-community",
+    "repo": "nh",
+    "rev": "c063ba16c9d954a0f42ba9be5fb2b5810a4de8fc",
+    "narHash": "sha256-YTRHibnanvLrmGPVMowNbKkbrksxBW3hErla5Kis/mo=",
+    "lastModified": 1793576535
   },
   "nix-secrets": {
     "type": "github",

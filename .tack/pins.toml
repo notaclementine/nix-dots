@@ -67,6 +67,9 @@ group = "mania"
 [inputs.ncro]
 url = "github:manic-systems/ncro"
 group = "mania"
+[inputs.nh]
+url = "github:nix-community/nh"
+group = "mania"
 [inputs.nixos-core]
 url = "github:manic-systems/nixos-core"
 group = "mania"
