@@ -32,11 +32,7 @@
         pkgs.efibootmgr
         self'.packages.nvim-qwerty
       ];
-      networking = {
-        hostName = "onyx";
-        dhcpcd.enable = false;
-        useDHCP = false;
-      };
+      networking.hostName = "onyx";
       nix.settings = {
         cores = 0;
         http-connections = 100;
@@ -63,24 +59,6 @@
           "default.clock.min-quantum" = 512;
           "default.clock.quantum" = 512;
           "default.clock.rate" = 48000;
-        };
-      };
-      services.resolved.enable = true;
-      systemd.network = {
-        enable = true;
-        links."10-ethernet" = {
-          matchConfig.Name = "en*";
-          linkConfig.WakeOnLan = "magic";
-        };
-        networks."10-ethernet" = {
-          linkConfig = {
-            RequiredForOnline = "routable";
-          };
-          matchConfig.Name = "en*";
-          networkConfig = {
-            DHCP = "ipv4";
-            IPv6AcceptRA = false;
-          };
         };
       };
       time.timeZone = "Europe/Amsterdam";

@@ -9,6 +9,7 @@
       clementine-headless
       headless
       mesa
+      wireless
       (
         {
           config,
@@ -16,14 +17,7 @@
           ...
         }: {
           isoImage.squashfsCompression = "gzip -Xcompression-level 1";
-          networking = {
-            hostName = "nixos-iso";
-            networkmanager = {
-              enable = lib.mkForce true;
-              wifi.backend = "iwd";
-            };
-            wireless.enable = false;
-          };
+          networking.hostName = "nixos-iso";
           system.nixos-core.persistence.enable = lib.mkForce false;
           security.nix-secrets.enable = lib.mkForce false;
           security.sudo.wheelNeedsPassword = false;

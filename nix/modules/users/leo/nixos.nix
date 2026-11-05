@@ -20,7 +20,6 @@
         description = "Leo Chittock";
         extraGroups = [
           "wheel"
-          "networkmanager"
           "dialout"
           "uucp"
         ];

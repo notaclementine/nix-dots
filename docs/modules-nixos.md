@@ -80,7 +80,7 @@ networking state.
 ## leo
 
 System-level user configuration for Leo. Defines user IDs, shell preferences,
-and supplementary groups (including `networkmanager`).
+and supplementary groups.
 
 ## limine
 

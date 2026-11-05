@@ -1,10 +1,6 @@
 {moduleWithSystem, ...}: {
   flake.nixosModules.evilix-config = moduleWithSystem (
-    {
-      self',
-      inputs',
-      ...
-    }: {
+    {self', ...}: {
       pkgs,
       lib,
       ...
@@ -26,11 +22,7 @@
           python3
         ];
       };
-      networking = {
-        hostName = "evilix";
-        dhcpcd.enable = false;
-        useDHCP = false;
-      };
+      networking.hostName = "evilix";
       systemd.user.targets = {
         "graphical-session".unitConfig.RefuseManualStart = false;
         "graphical-session-pre".unitConfig.RefuseManualStart = false;
@@ -68,6 +60,11 @@
         steam.enable = false;
       };
       security.nix-secrets.enable = lib.mkForce false;
+      systemd.network = {
+        enable = lib.mkForce false;
+        links = lib.mkForce {};
+      };
+      services.resolved.enable = lib.mkForce false;
       time.timeZone = "Europe/Amsterdam";
       users.users.clementine.hashedPasswordFile = "/persistent/secret/clementine/linux";
       wsl = {

@@ -2,10 +2,7 @@
   flake.nixosModules.murtle-config = moduleWithSystem ({self', ...}: {config, ...}: {
     environment.systemPackages = [self'.packages.nvim-qwerty];
     hardware.sensor.iio.enable = true;
-    networking = {
-      hostName = "murtle";
-      useDHCP = false;
-    };
+    networking.hostName = "murtle";
     nix.settings = {
       cores = 8;
       http-connections = 100;
@@ -15,26 +12,6 @@
     programs.iio-hyprland.enable = true;
     programs.nh.flake = "/persistent/dotfiles";
     security.nix-secrets.identityPaths = ["/persistent/nix-keys/age-identity.txt"];
-    services.resolved = {
-      enable = true;
-    };
-    systemd.network = {
-      enable = true;
-      links."10-ethernet" = {
-        matchConfig.Name = "en*";
-        linkConfig.WakeOnLan = "magic";
-      };
-      networks."10-ethernet" = {
-        linkConfig = {
-          RequiredForOnline = "routable";
-        };
-        matchConfig.Name = "en*";
-        networkConfig = {
-          DHCP = "ipv4";
-          IPv6AcceptRA = false;
-        };
-      };
-    };
     time.timeZone = "Europe/London";
     users = {
       mutableUsers = false;

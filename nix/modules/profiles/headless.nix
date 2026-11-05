@@ -86,7 +86,11 @@
         clobberByDefault = true;
         extraModules = [inputs.hjem-rum.hjemModules.default];
       };
-      networking.networkmanager.enable = false;
+      networking = {
+        dhcpcd.enable = false;
+        networkmanager.enable = lib.mkForce false;
+        useDHCP = false;
+      };
       nix.channel.enable = false;
       nix = {
         extraOptions = ''
@@ -216,6 +220,7 @@
             PermitRootLogin = "no";
           };
         };
+        resolved.enable = true;
       };
       system = {
         nixos-core = {
@@ -237,6 +242,31 @@
         };
       };
       systemd = {
+        network = {
+          enable = true;
+          links."10-ethernet" = {
+            matchConfig = {
+              Type = "ether";
+              Kind = "!*";
+            };
+            linkConfig = {
+              WakeOnLan = "magic";
+              NamePolicy = "keep kernel database onboard slot path";
+              AlternativeNamesPolicy = "database onboard slot path";
+              MACAddressPolicy = "persistent";
+            };
+          };
+          networks."10-ethernet" = {
+            linkConfig = {
+              RequiredForOnline = "routable";
+            };
+            matchConfig.Name = "en*";
+            networkConfig = {
+              DHCP = "ipv4";
+              IPv6AcceptRA = true;
+            };
+          };
+        };
         services."user@".serviceConfig.LimitMEMLOCK = "infinity";
         user.services."dbus-org.freedesktop.secrets".enable = false;
       };

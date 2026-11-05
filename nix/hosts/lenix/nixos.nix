@@ -55,19 +55,9 @@
         }"
       ];
       time.timeZone = "Europe/Amsterdam";
-
-      # Wireshark Course
-      programs.wireshark = {
-        enable = true;
-        package = pkgs.wireshark;
-      };
-
       users = {
         mutableUsers = false;
-        users.clementine = {
-          hashedPasswordFile = config.security.nix-secrets.secrets."clementine/linux".path;
-          extraGroups = ["wireshark"];
-        };
+        users.clementine.hashedPasswordFile = config.security.nix-secrets.secrets."clementine/linux".path;
       };
     }
   );
