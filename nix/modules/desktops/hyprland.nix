@@ -26,7 +26,9 @@
             terminal = "kitty -1"
 
             hl.env("QT_QPA_PLATFORM", "wayland;xcb")
-            hl.dsp.exec_cmd("uwsm app -- kitty --start-as=hidden -1")
+            hl.on("hyprland.start", function()
+                hl.exec_cmd("uwsm app -- kitty --start-as=hidden -1")
+            end)
           '';
         environment.sessionVariables = {
           HYPRCURSOR_SIZE = "24";
@@ -39,6 +41,7 @@
           hyprshot
           rose-pine-cursor
           rose-pine-hyprcursor
+          xrandr
         ];
         rum.desktops.hyprland.enable = true;
         xdg.config.files = {

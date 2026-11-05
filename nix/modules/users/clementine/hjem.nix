@@ -81,9 +81,6 @@
           diff = {
             tool = "vimdiff";
           };
-          git = {
-            sign-on-push = true;
-          };
           gpg = {
             format = "ssh";
           };
@@ -145,6 +142,9 @@
                   "$right"
                 ];
               };
+            };
+            git = {
+              sign-on-push = true;
             };
             user = {
               email = "git@econnah.uk";

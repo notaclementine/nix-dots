@@ -2,7 +2,11 @@
   flake = let
     theme = self + "/not-nix/themes/oledppuccin/";
   in {
-    hjemModules.oledppuccin = {pkgs, ...}: let
+    hjemModules.oledppuccin = {
+      config,
+      pkgs,
+      ...
+    }: let
       gtkTheme = pkgs.magnetic-catppuccin-gtk.override {
         accent = ["mauve"];
         shade = "dark";
@@ -16,6 +20,8 @@
       '';
     in {
       imports = [self.hjemModules.themes-shared];
+      environment.sessionVariables = {
+      };
       packages = [gtkTheme];
       rum.programs.kitty.settings.include = "oledppuccin.conf";
       xdg = {

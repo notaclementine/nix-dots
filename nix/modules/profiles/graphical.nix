@@ -1,12 +1,9 @@
 {self, ...}: {
   flake.nixosModules.graphical = {
-    config,
     lib,
     pkgs,
     ...
-  }: let
-    inherit (lib) optionalAttrs;
-  in {
+  }: {
     imports = with self.nixosModules; [headless];
     environment = {
       etc."tuigreet/config.toml".source = "${self}/not-nix/presets/tuigreet.toml";
@@ -89,6 +86,7 @@
         pulse.enable = true;
         wireplumber.enable = true;
       };
+      playerctld.enable = true;
       stash-clipboard.enable = true;
     };
     virtualisation = {

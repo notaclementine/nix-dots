@@ -84,11 +84,17 @@
       };
       hjem = {
         clobberByDefault = true;
-        extraModules = [inputs.hjem-rum.hjemModules.default];
+        extraModules = [
+          inputs.hjem-rum.hjemModules.default
+          ({pkgs, ...}: {
+            _module.args.pkgs = lib.mkDefault pkgs;
+          })
+        ];
       };
       networking = {
         dhcpcd.enable = false;
         networkmanager.enable = lib.mkForce false;
+        nftables.enable = true;
         useDHCP = false;
       };
       nix.channel.enable = false;
@@ -119,11 +125,7 @@
       nixpkgs.config.allowUnfree = true;
       programs = {
         bat.enable = true;
-        cade = {
-          enable = true;
-          verbosity = "quiet";
-          longRunningWarningMs = 50000;
-        };
+        cade.enable = true;
         fish.enable = true;
         git.enable = true;
         gnupg.agent = {
@@ -216,11 +218,16 @@
         gnome.gnome-keyring.enable = lib.mkForce false;
         openssh = {
           enable = true;
+          openFirewall = false;
           settings = {
             PermitRootLogin = "no";
+            KbdInteractiveAuthentication = false;
           };
         };
-        resolved.enable = true;
+        resolved = {
+          enable = true;
+          settings.Resolve.LLMNR = "false";
+        };
       };
       system = {
         nixos-core = {

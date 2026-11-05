@@ -19,10 +19,17 @@
           isoImage.squashfsCompression = "gzip -Xcompression-level 1";
           networking.hostName = "nixos-iso";
           system.nixos-core.persistence.enable = lib.mkForce false;
-          security.nix-secrets.enable = lib.mkForce false;
-          security.sudo.wheelNeedsPassword = false;
-          services.flatpak.enable = lib.mkForce false;
-          services.openssh.settings.PermitRootLogin = lib.mkForce "yes";
+          security = {
+            nix-secrets.enable = lib.mkForce false;
+            sudo.wheelNeedsPassword = false;
+          };
+          services = {
+            flatpak.enable = lib.mkForce false;
+            openssh = {
+              openFirewall = lib.mkForce true;
+              settings.PermitRootLogin = lib.mkForce "yes";
+            };
+          };
           users = {
             mutableUsers = lib.mkForce true;
             users = {
