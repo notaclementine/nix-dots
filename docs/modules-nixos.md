@@ -62,6 +62,16 @@ in favour of explicit networking.
 Enables the Hyprland desktop environment at the system level, including XWayland
 support and UWSM integration.
 
+## imperm-btrfs
+
+My prefered disk setup for impermanence, it uses btrfs subvolumes which resize
+dynamically.
+
+## imperm-f2fs
+
+A setup that uses f2fs as the root drive for some performance benefits, less
+prefered by me. Has a fixed 8G partition.
+
 ## kyla
 
 System-level user configuration for Kyla. Defines user IDs and groups, and

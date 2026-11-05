@@ -10,9 +10,7 @@
       limine
       phoenix-circus
       phoenix-config
-      phoenix-disko
       phoenix-hardware
-      preservation
     ];
   };
 }

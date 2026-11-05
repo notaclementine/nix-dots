@@ -1,88 +1,88 @@
 {inputs, ...}: {
   flake.nixosModules.onyx-disko = {
     imports = [inputs.disko.nixosModules.disko];
-    disko.devices.disk.hdd = {
-      content = {
-        partitions = {
-          storage = {
+    disko.devices = {
+      disk.hdd = {
+        content = {
+          partitions.storage = {
             content = {
               extraArgs = ["-f"];
-              subvolumes = {
-                "/data" = {
-                  mountOptions = [
-                    "subvol=data"
-                    "compress=zstd:3"
-                    "noatime"
-                  ];
-                  mountpoint = "/data";
-                };
+              subvolumes."/data" = {
+                mountOptions = [
+                  "subvol=data"
+                  "compress=zstd:3"
+                  "noatime"
+                ];
+                mountpoint = "/data";
               };
               type = "btrfs";
             };
             size = "100%";
           };
+          type = "gpt";
         };
-        type = "gpt";
+        device = "/dev/disk/by-id/ata-ST2000LM015-2E8174_ZDZQ7T41";
+        type = "disk";
       };
-      device = "/dev/disk/by-id/ata-ST2000LM015-2E8174_ZDZQ7T41";
-      type = "disk";
-    };
-    disko.devices.disk.main = {
-      content.partitions.esp = {
-        content = {
-          format = "vfat";
-          mountpoint = "/boot";
-          type = "filesystem";
-        };
-        name = "ESP";
-        size = "5G";
-        type = "EF00";
-      };
-      content.partitions.root = {
-        content = {
-          extraArgs = ["-f"];
-          subvolumes = {
-            "/nix" = {
-              mountOptions = [
-                "subvol=nix"
-                "compress=zstd:3"
-                "noatime"
-              ];
-              mountpoint = "/nix";
+      disk.main = {
+        content.partitions = {
+          esp = {
+            content = {
+              format = "vfat";
+              mountpoint = "/boot";
+              type = "filesystem";
             };
-            "/persistent" = {
-              mountOptions = [
-                "subvol=persistent"
-                "compress=zstd:3"
-                "noatime"
-              ];
-              mountpoint = "/persistent";
-            };
-            "/tmp" = {
-              mountOptions = [
-                "subvol=tmp"
-                "compress=zstd:3"
-                "noatime"
-              ];
-              mountpoint = "/tmp";
-            };
+            name = "ESP";
+            size = "5G";
+            type = "EF00";
           };
-          type = "btrfs";
+          root = {
+            content = {
+              extraArgs = ["-f"];
+              subvolumes = {
+                "/nix" = {
+                  mountOptions = [
+                    "subvol=nix"
+                    "compress=zstd:3"
+                    "noatime"
+                  ];
+                  mountpoint = "/nix";
+                };
+                "/persistent" = {
+                  mountOptions = [
+                    "subvol=persistent"
+                    "compress=zstd:3"
+                    "noatime"
+                  ];
+                  mountpoint = "/persistent";
+                };
+                "/tmp" = {
+                  mountOptions = [
+                    "subvol=tmp"
+                    "compress=zstd:3"
+                    "noatime"
+                  ];
+                  mountpoint = "/tmp";
+                };
+              };
+              type = "btrfs";
+            };
+            name = "root";
+            size = "100%";
+          };
         };
-        name = "root";
-        size = "100%";
+        content.type = "gpt";
+        device = "/dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S6B0NU0WA12347K";
+        type = "disk";
       };
-      content.type = "gpt";
-      device = "/dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S6B0NU0WA12347K";
-      type = "disk";
-    };
-    disko.devices.nodev = {
-      "/" = {
-        fsType = "tmpfs";
-        mountOptions = [
-          "size=25%"
-          "mode=755"
-        ];
+      nodev = {
+        "/" = {
+          fsType = "tmpfs";
+          mountOptions = [
+            "size=25%"
+            "mode=755"
+          ];
+        };
       };
     };
     fileSystems = {

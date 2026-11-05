@@ -7,7 +7,6 @@
     modules = with self.nixosModules; [
       aude
       cookie-config
-      cookie-disko
       cookie-hardware
       cookie-hjem
       hyprland
@@ -16,7 +15,6 @@
       limine
       lix
       mesa
-      preservation
     ];
   };
 }

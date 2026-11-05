@@ -1,6 +1,13 @@
-{inputs, ...}: {
-  flake.nixosModules.ACE-disko = {
-    imports = [inputs.disko.nixosModules.disko];
+{
+  inputs,
+  self,
+  ...
+}: {
+  flake.nixosModules.imperm-f2fs = {pkgs, ...}: {
+    imports = [
+      inputs.disko.nixosModules.disko
+      self.nixosModules.preservation
+    ];
     disko.devices.disk.main = {
       content = {
         partitions = {
@@ -65,7 +72,6 @@
         };
         type = "gpt";
       };
-      device = "/dev/disk/by-id/ata-Micron_1300_MTFDDAV256TDL_2006266A1573";
       type = "disk";
     };
     fileSystems = {
@@ -82,6 +88,23 @@
         options = ["bind"];
         neededForBoot = true;
         depends = ["/persistent"];
+      };
+    };
+    boot.initrd = {
+      supportedFilesystems = ["f2fs"];
+      systemd.services.wipe-root = {
+        after = [
+          "dev-disk-by\\x2dpartlabel-disk\\x2dmain\\x2droot.device"
+          "systemd-hibernate-resume.service"
+        ];
+        before = ["sysroot.mount"];
+        description = "Reformat root filesystem";
+        serviceConfig = {
+          ExecStart = "${pkgs.f2fs-tools}/bin/mkfs.f2fs -f -l root /dev/disk/by-partlabel/disk-main-root";
+          Type = "oneshot";
+        };
+        unitConfig.DefaultDependencies = "no";
+        wantedBy = ["initrd.target"];
       };
     };
   };

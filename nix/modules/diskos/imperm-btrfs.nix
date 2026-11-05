@@ -1,6 +1,13 @@
-{inputs, ...}: {
-  flake.nixosModules.cookie-disko = {
-    imports = [inputs.disko.nixosModules.disko];
+{
+  inputs,
+  self,
+  ...
+}: {
+  flake.nixosModules.imperm-btrfs = {pkgs, ...}: {
+    imports = [
+      inputs.disko.nixosModules.disko
+      self.nixosModules.preservation
+    ];
     disko.devices.disk.main = {
       content = {
         partitions = {
@@ -58,19 +65,9 @@
             priority = 3;
             size = "100%";
           };
-          swap = {
-            content = {
-              resumeDevice = true;
-              type = "swap";
-            };
-            name = "swap";
-            priority = 2;
-            size = "12G";
-          };
         };
         type = "gpt";
       };
-      device = "/dev/disk/by-id/ata-ST1000LM035-1RK172_WDEFKAEW";
       type = "disk";
     };
     fileSystems = {
@@ -83,6 +80,33 @@
         neededForBoot = true;
         depends = ["/persistent"];
       };
+    };
+    boot.initrd.systemd.services.rollback-void = {
+      after = [
+        "dev-disk-by\\x2dpartlabel-disk\\x2dmain\\x2droot.device"
+        "systemd-hibernate-resume.service"
+      ];
+      before = ["sysroot.mount"];
+      description = "Roll back @void root subvolume to blank snapshot";
+      path = [
+        pkgs.btrfs-progs
+        pkgs.coreutils
+        pkgs.gawk
+        pkgs.util-linux
+      ];
+      script = ''
+        mkdir -p /mnt
+        mount /dev/disk/by-partlabel/disk-main-root /mnt
+        for sub in $(btrfs subvolume list -o /mnt/@void 2>/dev/null | awk '{print $NF}' | sort -r); do
+          btrfs subvolume delete "/mnt/$sub" || true
+        done
+        btrfs subvolume delete /mnt/@void
+        btrfs subvolume snapshot /mnt/@void-blank /mnt/@void
+        umount /mnt
+      '';
+      serviceConfig.Type = "oneshot";
+      unitConfig.DefaultDependencies = "no";
+      wantedBy = ["initrd.target"];
     };
   };
 }

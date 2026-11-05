@@ -13,9 +13,7 @@
       limine
       lix
       nvidia
-      preservation
       turtle-config
-      turtle-disko
       turtle-hardware
       turtle-hjem
     ];

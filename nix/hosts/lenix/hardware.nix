@@ -15,7 +15,10 @@
         kernelModules = [];
         luks.devices."cryptlenix".device = "/dev/disk/by-uuid/6a31662c-38a3-43f7-bf31-2185d0baf64d";
         systemd.services.rollback-void = {
-          after = ["cryptsetup.target"];
+          after = [
+            "cryptsetup.target"
+            "systemd-hibernate-resume.service"
+          ];
           before = ["sysroot.mount"];
           description = "Roll back @void root subvolume to blank snapshot";
           path = [
@@ -28,7 +31,7 @@
             mkdir -p /mnt
             mount /dev/mapper/cryptlenix /mnt
             for sub in $(btrfs subvolume list -o /mnt/@void 2>/dev/null | awk '{print $NF}' | sort -r); do
-                btrfs subvolume delete "/mnt/$sub" || true
+              btrfs subvolume delete "/mnt/$sub" || true
             done
             btrfs subvolume delete /mnt/@void
             btrfs subvolume snapshot /mnt/@void-blank /mnt/@void

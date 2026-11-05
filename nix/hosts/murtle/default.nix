@@ -12,10 +12,8 @@
       lix
       mesa
       murtle-config
-      murtle-disko
       murtle-hardware
       murtle-hjem
-      preservation
     ];
   };
 }

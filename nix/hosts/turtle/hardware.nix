@@ -1,50 +1,49 @@
-{
+{self, ...}: {
   flake.nixosModules.turtle-hardware = {
     lib,
-    pkgs,
     modulesPath,
     ...
   }: {
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")
+      self.nixosModules.imperm-btrfs
     ];
     boot = {
-      initrd = {
-        availableKernelModules = [
-          "nvme"
-          "xhci_pci"
-          "ahci"
-          "usb_storage"
-          "sd_mod"
-        ];
-        systemd.services.rollback-void = {
-          after = ["dev-disk-by\\x2dpartlabel-disk\\x2dmain\\x2droot.device"];
-          before = ["sysroot.mount"];
-          description = "Roll back @void root subvolume to blank snapshot";
-          path = [
-            pkgs.btrfs-progs
-            pkgs.coreutils
-            pkgs.gawk
-            pkgs.util-linux
-          ];
-          script = ''
-            mkdir -p /mnt
-            mount /dev/disk/by-partlabel/disk-main-root /mnt
-            for sub in $(btrfs subvolume list -o /mnt/@void 2>/dev/null | awk '{print $NF}' | sort -r); do
-                btrfs subvolume delete "/mnt/$sub" || true
-            done
-            btrfs subvolume delete /mnt/@void
-            btrfs subvolume snapshot /mnt/@void-blank /mnt/@void
-            umount /mnt
-          '';
-          serviceConfig.Type = "oneshot";
-          unitConfig.DefaultDependencies = "no";
-          wantedBy = ["initrd.target"];
-        };
-      };
+      initrd.availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "sd_mod"
+      ];
       kernelModules = [
         "kvm-intel"
       ];
+    };
+    disko.devices.disk = {
+      hdd = {
+        content = {
+          partitions.storage = {
+            content = {
+              extraArgs = ["-f"];
+              subvolumes."/data" = {
+                mountOptions = [
+                  "subvol=data"
+                  "compress=zstd:3"
+                  "noatime"
+                ];
+                mountpoint = "/data";
+              };
+              type = "btrfs";
+            };
+            size = "100%";
+          };
+          type = "gpt";
+        };
+        device = "/dev/disk/by-id/ata-TOSHIBA_DT01ACA100_897K99ANS";
+        type = "disk";
+      };
+      main.device = "/dev/disk/by-id/ata-SanDisk_SDSSDH3_500G_21107B801252";
     };
     environment.etc."machine-id".text = "913d87e12b95456b83a3427fbd512e9b\n";
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

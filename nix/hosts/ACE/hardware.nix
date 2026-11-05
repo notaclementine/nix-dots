@@ -1,41 +1,26 @@
-{
+{self, ...}: {
   flake.nixosModules.ACE-hardware = {
     lib,
-    pkgs,
     modulesPath,
     ...
   }: {
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")
+      self.nixosModules.imperm-f2fs
     ];
     boot = {
-      extraModulePackages = [];
-      initrd = {
-        availableKernelModules = [
-          "nvme"
-          "xhci_pci"
-          "ahci"
-          "usb_storage"
-          "sd_mod"
-        ];
-        kernelModules = [];
-        supportedFilesystems = ["f2fs"];
-        systemd.services.wipe-root = {
-          after = ["dev-disk-by\\x2dpartlabel-disk\\x2dmain\\x2droot.device"];
-          before = ["sysroot.mount"];
-          description = "Reformat root filesystem";
-          serviceConfig = {
-            ExecStart = "${pkgs.f2fs-tools}/bin/mkfs.f2fs -f -l root /dev/disk/by-partlabel/disk-main-root";
-            Type = "oneshot";
-          };
-          unitConfig.DefaultDependencies = "no";
-          wantedBy = ["initrd.target"];
-        };
-      };
+      initrd.availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "sd_mod"
+      ];
       kernelModules = [
         "kvm-amd"
       ];
     };
+    disko.devices.disk.main.device = "/dev/disk/by-id/ata-Micron_1300_MTFDDAV256TDL_2006266A1573";
     environment.etc."machine-id".text = "54b5ba77e1af49dbab5bd2edad98249f\n";
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   };
