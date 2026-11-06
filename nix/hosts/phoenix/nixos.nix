@@ -21,7 +21,27 @@
     };
     programs.nh.flake = "/persistent/dotfiles";
     security.nix-secrets.identityPaths = ["/persistent/keys/age-identity.txt"];
-    services.openssh.settings.PasswordAuthentication = false; # force login to only yubikey
+    services = {
+      openssh.settings.PasswordAuthentication = false; # force login to only yubikey
+      caddy = {
+        enable = true;
+        globalConfig = ''
+          auto_https off
+          servers {
+            timeouts {
+              idle 1m
+            }
+          }
+        '';
+      };
+    };
+    system.nixos-core.persistence.stores."/persistent".directories = [
+      {
+        group = "caddy";
+        owner = "caddy";
+        target = "/var/lib/caddy";
+      }
+    ];
     time.timeZone = "Europe/London";
     users = {
       mutableUsers = false;

@@ -69,32 +69,19 @@
           };
         };
       };
-      haproxy = {
-        enable = true;
-        config = ''
-          defaults
-            mode http
-            option forwardfor
-            timeout connect 5s
-            timeout client 10m
-            timeout server 10m
-            timeout tunnel 1h
-            timeout http-keep-alive 30s
-            timeout http-request 30s
-
-          frontend circus_in
-            bind 100.110.83.57:3000
-            default_backend circus_out
-
-          backend circus_out
-            server local 127.0.0.1:3001
-        '';
-      };
     };
 
     system.nixos-core.persistence.stores."/persistent".directories = [
-      "/var/lib/circus"
-      "/var/lib/postgresql"
+      {
+        group = "circus";
+        owner = "circus";
+        target = "/var/lib/circus";
+      }
+      {
+        group = "postgres";
+        owner = "postgres";
+        target = "/var/lib/postgresql";
+      }
     ];
 
     security.nix-secrets.secrets = {
@@ -115,48 +102,17 @@
     };
 
     systemd.services = {
-      tailscale-online = {
-        description = "wait for tailscale to get an ip";
-        after = ["tailscaled.service"];
-        requires = ["tailscaled.service"];
-        partOf = ["tailscaled.service"];
-        wantedBy = ["multi-user.target"];
-        path = [config.services.tailscale.package];
-        serviceConfig = {
-          Type = "oneshot";
-          RemainAfterExit = true;
-          TimeoutStartSec = "infinity";
-        };
-        script = ''
-          until tailscale ip -4 >/dev/null 2>&1; do
-            sleep 1
-          done
-        '';
-      };
       circus-server = {
-        after = ["tailscale-online.service"];
-        requires = ["tailscale-online.service"];
-        partOf = ["tailscale-online.service"];
-
         serviceConfig.LimitNOFILE = 65536;
-      };
-      circus-evaluator = {
-        after = ["tailscale-online.service"];
-        requires = ["tailscale-online.service"];
-        partOf = ["tailscale-online.service"];
       };
       circus-queue-runner = {
-        after = ["tailscale-online.service"];
-        requires = ["tailscale-online.service"];
-        partOf = ["tailscale-online.service"];
-
         serviceConfig.LimitNOFILE = 65536;
       };
-      haproxy = {
-        after = ["tailscale-online.service"];
-        requires = ["tailscale-online.service"];
-        partOf = ["tailscale-online.service"];
-      };
     };
+    services.caddy.extraConfig = ''
+      http://circus.ts.econnah.uk {
+        reverse_proxy 127.0.0.1:3001
+      }
+    '';
   };
 }
