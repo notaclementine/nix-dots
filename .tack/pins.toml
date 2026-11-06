@@ -60,6 +60,9 @@ clementine = "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29
 url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
 
 # manic systems + rafware <3
+[inputs.beer]
+url = "git+https://git.notashelf.dev/notashelf/beer.git"
+tag = "{version}"
 [inputs.cade]
 url = "github:manic-systems/cade"
 group = "mania"

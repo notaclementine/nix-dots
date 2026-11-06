@@ -21,6 +21,7 @@
     in {
       imports = [self.hjemModules.themes-shared];
       environment.sessionVariables = {
+        BEER_CONFIG = "${config.xdg.config.directory}/beer/beer.toml:${theme}beer.toml";
       };
       packages = [gtkTheme];
       rum.programs.kitty.settings.include = "oledppuccin.conf";

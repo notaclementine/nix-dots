@@ -12,6 +12,10 @@ User environment configuration for Aude. Configures `git` and `jujutsu` (jj),
 sets Neovim as the default editor, and installs applications like LibreOffice,
 Signal, and Vesktop.
 
+## beer
+
+Installs beer and adds the daemon in the background. Simple.
+
 ## clementine-graphical
 
 Graphical setup for Clémentine. Installs core applications (Obsidian, Halloy,

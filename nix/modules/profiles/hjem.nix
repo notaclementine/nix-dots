@@ -2,6 +2,7 @@
   flake.hjemModules = {
     graphical = {pkgs, ...}: {
       imports = with self.hjemModules; [
+        beer
         easyeffects
         headless
         swaybg

@@ -1,6 +1,7 @@
 {
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
+    "beer": "git+https://git.notashelf.dev/notashelf/beer.git",
     "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
     "disko": "github:nix-community/disko",
@@ -27,6 +28,16 @@
     "rev": "fddb787e7fabd50eb8c8154ed3d1e8cb0fca3eba",
     "narHash": "sha256-BvkyLVvSJi63HraDCPiRJck8Fr28m9c++VOukdAigrc=",
     "lastModified": 1793887554
+  },
+  "beer": {
+    "type": "git",
+    "url": "https://git.notashelf.dev/notashelf/beer.git",
+    "ref": "refs/tags/0.13.0",
+    "rev": "ba29e66548fff1c7920684ca52166d3c13a34345",
+    "narHash": "sha256-jFwjoh3XnEtM4+QoSapB2V0ipgR2wvDht+8oCqRfh08=",
+    "lastModified": 1793457497,
+    "tag": "0.13.0",
+    "version": "0.13.0"
   },
   "cade": {
     "type": "github",
