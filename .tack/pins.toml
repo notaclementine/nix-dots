@@ -61,7 +61,7 @@ url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
 
 # manic systems + rafware <3
 [inputs.beer]
-url = "git+https://git.notashelf.dev/notashelf/beer.git"
+url = "git+ssh://git@git.notashelf.dev:33/notashelf/beer.git"
 tag = "{version}"
 group = "mania"
 [inputs.brewery]
