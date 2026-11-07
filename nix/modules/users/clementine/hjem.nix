@@ -15,6 +15,7 @@
         libreoffice
         librespot
         obsidian
+        osu-lazer
         prismlauncher
         signal-desktop
         vesktop
