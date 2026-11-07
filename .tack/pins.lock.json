@@ -25,9 +25,9 @@
     "type": "github",
     "owner": "nix-community",
     "repo": "nixos-apple-silicon",
-    "rev": "fddb787e7fabd50eb8c8154ed3d1e8cb0fca3eba",
-    "narHash": "sha256-BvkyLVvSJi63HraDCPiRJck8Fr28m9c++VOukdAigrc=",
-    "lastModified": 1793887554
+    "rev": "73301d52f114946d53e62902692c36b0fea0c904",
+    "narHash": "sha256-mA17MzIYFxeoo6mOyuspry6WIm7/f8m7gDAcy3o/jj4=",
+    "lastModified": 1793951909
   },
   "beer": {
     "type": "git",
@@ -107,9 +107,9 @@
     "type": "git",
     "url": "https://git.lix.systems/lix-project/lix",
     "ref": "HEAD",
-    "rev": "e3aada3cbac5b2a1453536258222716193ced361",
-    "narHash": "sha256-G/yURBA5cXtLn47hEsHSX3+QQRJiQ5T1XnW+8r6lmwc=",
-    "lastModified": 1793817706
+    "rev": "d11b8ef914f7692e56cd01661bab3f965513c365",
+    "narHash": "sha256-Mtem/KxbTPGFKps3w6+CmoG9Cm6kJBORUBX6qyonuPA=",
+    "lastModified": 1793986817
   },
   "ncro": {
     "type": "github",
