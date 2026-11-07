@@ -10,7 +10,7 @@
         vicinae
       ];
       packages = with pkgs; [
-        (lazyspotify.override {customKeyring = "/org/freedesktop/secrets/collection/Login";})
+        (lazyspotify.override {withOo7 = true;})
         halloy
         libreoffice
         librespot

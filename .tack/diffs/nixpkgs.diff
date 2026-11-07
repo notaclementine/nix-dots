@@ -1,0 +1,28 @@
+diff --git a/pkgs/by-name/la/lazyspotify/package.nix b/pkgs/by-name/la/lazyspotify/package.nix
+--- a/pkgs/by-name/la/lazyspotify/package.nix
++++ b/pkgs/by-name/la/lazyspotify/package.nix
+@@ -4,7 +4,7 @@
+   fetchFromGitHub,
+   lib,
+   versionCheckHook,
+-  customKeyring ? null,
++  withOo7 ? false,
+ }:
+ buildGoModule (finalAttrs: {
+   pname = "lazyspotify";
+@@ -23,12 +23,11 @@
+ 
+   subPackages = [ "cmd/lazyspotify" ];
+ 
+-  # lets me use oo7 with /org/freedesktop/secrets/collection/Login
+-  # unsure why its needed tbh but fails without
+-  preBuild = lib.optionalString (customKeyring != null) ''
++  preBuild = lib.optionalString withOo7 ''
+     chmod -R u+w vendor/github.com/zalando/go-keyring
+     substituteInPlace vendor/github.com/zalando/go-keyring/secret_service/secret_service.go \
+-      --replace-fail '/org/freedesktop/secrets/aliases/default' '${customKeyring}'
++      --replace-fail 'text/plain; charset=utf8' 'text/plain' \
++      --replace-fail '/org/freedesktop/secrets/aliases/default' '/org/freedesktop/secrets/collection/Login'
+   '';
+ 
+   ldflags = [
