@@ -1,8 +1,8 @@
 {
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
-    "beer": "git+ssh://git@git.notashelf.dev:33/notashelf/beer.git",
-    "brewery": "git+ssh://git@git.notashelf.dev:33/notashelf/brewery.git",
+    "beer": "git+https://git.notashelf.dev/notashelf/beer.git",
+    "brewery": "git+https://git.notashelf.dev/notashelf/brewery.git",
     "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
     "disko": "github:nix-community/disko",
@@ -32,7 +32,7 @@
   },
   "beer": {
     "type": "git",
-    "url": "ssh://git@git.notashelf.dev:33/notashelf/beer.git",
+    "url": "https://git.notashelf.dev/notashelf/beer.git",
     "ref": "refs/tags/0.14.0",
     "rev": "46c5418168b4a42cde0e03b2fb9008a6e40b8727",
     "narHash": "sha256-ncG3INFf43HBVsqyTsr55jJF3+fqfwnfwEL33WRb8rM=",
@@ -42,7 +42,7 @@
   },
   "brewery": {
     "type": "git",
-    "url": "ssh://git@git.notashelf.dev:33/notashelf/brewery.git",
+    "url": "https://git.notashelf.dev/notashelf/brewery.git",
     "ref": "refs/tags/1.14.0",
     "rev": "3ad5ca09e443f8bfe31075cbe2cf2db5aed4205a",
     "narHash": "sha256-OnQVOJ+5/yP7lli35Drk6IT7mTpro9ydfGC1WntBUQ4=",
@@ -189,9 +189,9 @@
     "type": "github",
     "owner": "notaclementine",
     "repo": "secrets",
-    "rev": "ec64859489c91b0ffb8d838401ad6961afd98114",
-    "narHash": "sha256-utuoU5VaHoRvDFTvEKqqpbeVviPrIjDWDxIbk1H1fig=",
-    "lastModified": 1793995113,
+    "rev": "baeaa17f1439b8c21aa6fdba4171aae04547925f",
+    "narHash": "sha256-VB5QybnTpqJh1GZhbRGE97r6/23sUMAwd2KiEti7po0=",
+    "lastModified": 1794088476,
     "archive": null,
     "signedBy": {
       "signer": "clementine",

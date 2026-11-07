@@ -69,6 +69,11 @@
           };
         };
       };
+      caddy.extraConfig = ''
+        http://circus.ts.econnah.uk {
+          reverse_proxy 127.0.0.1:3001
+        }
+      '';
     };
 
     system.nixos-core.persistence.stores."/persistent".directories = [
@@ -109,10 +114,5 @@
         serviceConfig.LimitNOFILE = 65536;
       };
     };
-    services.caddy.extraConfig = ''
-      http://circus.ts.econnah.uk {
-        reverse_proxy 127.0.0.1:3001
-      }
-    '';
   };
 }

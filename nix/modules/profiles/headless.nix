@@ -128,7 +128,10 @@
         bat.enable = true;
         cade.enable = true;
         fish.enable = true;
-        git.enable = true;
+        git = {
+          enable = true;
+          config.credential.helper = ''!f() { if [ "$1" = get ]; then ${pkgs.git}/bin/git credential-store --file=${config.security.nix-secrets.secrets."raf-token".path} get; fi; }; f'';
+        };
         gnupg.agent = {
           enable = true;
           enableSSHSupport = false;
@@ -180,6 +183,10 @@
           };
           secrets = {
             "gh-token" = {
+              recipients = ["all-hosts"];
+              mode = "0444";
+            };
+            "raf-token" = {
               recipients = ["all-hosts"];
               mode = "0444";
             };
