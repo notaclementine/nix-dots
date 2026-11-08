@@ -42,7 +42,7 @@
           queue_runner = {
             build_timeout = 15000;
             workers = 4;
-            local_systems = ["aarch64-linux"];
+            local_systems = ["aarch64-linux" "x86_64-linux"];
             local_features = ["nixos-test" "big-parallel" "kvm"];
           };
           evaluator = {
@@ -52,7 +52,7 @@
             memory_limit_mb = 3072;
             eval_workers = 4;
             max_concurrent_evals = 2;
-            systems = ["aarch64-linux"];
+            systems = ["aarch64-linux" "x86_64-linux"];
           };
           gc = {
             enabled = true;

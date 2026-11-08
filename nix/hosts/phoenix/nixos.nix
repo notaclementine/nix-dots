@@ -7,14 +7,20 @@
     environment.systemPackages = [
       self'.packages.nvim-qwerty
     ];
-    boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
-    boot.loader.limine.efiInstallAsRemovable = true;
+    boot = {
+      binfmt.emulatedSystems = ["x86_64-linux"];
+      loader = {
+        efi.canTouchEfiVariables = lib.mkForce false;
+        limine.efiInstallAsRemovable = true;
+      };
+    };
     networking.hostName = "phoenix";
     nix.settings = {
       experimental-features = [
         "pipe-operators"
       ];
       cores = 4;
+      extra-platforms = ["x86_64-linux"];
       http-connections = 100;
       max-jobs = 4;
       secret-key-files = [config.security.nix-secrets.secrets."nix-cache-key".path];
