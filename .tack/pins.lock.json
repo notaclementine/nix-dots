@@ -10,6 +10,7 @@
     "flake-parts": "github:hercules-ci/flake-parts",
     "hjem": "github:feel-co/hjem",
     "hjem-rum": "github:snugnug/hjem-rum",
+    "hyprland": "github:hyprwm/hyprland",
     "lix": "git+https://git.lix.systems/lix-project/lix",
     "ncro": "github:manic-systems/ncro",
     "nh": "github:nix-community/nh",
@@ -113,6 +114,14 @@
     "rev": "4194064c687bf6ca7a79cbe127cbe5a3f51ed5d5",
     "narHash": "sha256-ntcojKoFfndHu9/cw6zRyan2AECyxMwJ0e1Qr7a+m40=",
     "lastModified": 1789576270
+  },
+  "hyprland": {
+    "type": "github",
+    "owner": "hyprwm",
+    "repo": "hyprland",
+    "rev": "ab6141897d57e609e24c571a762c30c963e0885a",
+    "narHash": "sha256-rqmgV0BeCtguyXNsmXjH5+bauyrpWA4imqz9B7zCtvQ=",
+    "lastModified": 1793984293
   },
   "lix": {
     "type": "git",

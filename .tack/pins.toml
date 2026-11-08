@@ -115,6 +115,8 @@ url = "github:nix-community/disko"
 url = "github:hercules-ci/flake-parts"
 [inputs.hjem-rum]
 url = "github:snugnug/hjem-rum"
+[inputs.hyprland]
+url = "github:hyprwm/hyprland"
 [inputs.lix]
 url = "git+https://git.lix.systems/lix-project/lix"
 [inputs.nix-secrets]

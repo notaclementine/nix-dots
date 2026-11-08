@@ -54,9 +54,14 @@
               public_key = "nix-secrets.cachix.org-1:NSwybk1LexO4kPH755itLM1t2NGegVq9YR22KlG8Vp0=";
             }
             {
-              url = "https://afnix-hydra.s3-bulk-web.afnix.fr/";
+              url = "https://afnix-hydra.s3-bulk-web.afnix.fr";
               priority = 40;
               public_key = "afnix:oqt801y+IwJ09XRtNDQYCKb7zuCw9DQXQk8fDWPkwxM=";
+            }
+            {
+              url = "https://hyprland.cachix.org";
+              priority = 40;
+              public_key = "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=";
             }
           ]
           ++ lib.optional (config.networking.hostName != "phoenix") {
