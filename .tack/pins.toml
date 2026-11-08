@@ -121,5 +121,7 @@ url = "github:hyprwm/hyprland"
 url = "git+https://git.lix.systems/lix-project/lix"
 [inputs.nix-secrets]
 url = "github:unnamed-systems/nix-secrets"
+[inputs.vicinae]
+url = "github:vicinaehq/vicinae"
 [inputs.wsl]
 url = "github:nix-community/NixOS-WSL"

@@ -21,6 +21,7 @@
     "rom": "github:manic-systems/rom",
     "super-secret": "github:notaclementine/secrets",
     "tack": "github:manic-systems/tack",
+    "vicinae": "github:vicinaehq/vicinae",
     "wsl": "github:nix-community/NixOS-WSL"
   },
   "apple-silicon": {
@@ -228,6 +229,14 @@
     "rev": "cd02f41558f0ccf8b1ae67fd96950ed0e6553129",
     "narHash": "sha256-NkEQK3h5pn39Cj4zMf/EYoxUo0/SNnkR0yGaYvJ96DA=",
     "lastModified": 1794039014
+  },
+  "vicinae": {
+    "type": "github",
+    "owner": "vicinaehq",
+    "repo": "vicinae",
+    "rev": "84a0086f0e589576c3c55a211579e63c20d83e59",
+    "narHash": "sha256-GyN4K/lOaRRO2RkFJS5dVmpNX7xsrVbclzBfxd3mxtU=",
+    "lastModified": 1794153382
   },
   "wsl": {
     "type": "github",
