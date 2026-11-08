@@ -39,4 +39,7 @@ hl.config({
     animations = {
         enabled = true,
     },
+    render = {
+        cm_auto_hdr = 0,
+    },
 })
