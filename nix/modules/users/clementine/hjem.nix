@@ -95,7 +95,7 @@
           };
           user = {
             email = "git@econnah.uk";
-            name = "Connor Alecks";
+            name = "Clémentine";
             signingkey = "~/.ssh/id_ed25519_sk_rk.pub";
           };
         };
@@ -148,7 +148,7 @@
             };
             user = {
               email = "git@econnah.uk";
-              name = "Connor Alecks";
+              name = "Clémentine";
             };
           };
         };
