@@ -15,7 +15,6 @@
           "/var/lib/flatpak"
           "/var/lib/sbctl"
           "/var/lib/tailscale"
-          "/var/log"
           {
             target = "/var/lib/systemd/network";
             owner = "systemd-network";

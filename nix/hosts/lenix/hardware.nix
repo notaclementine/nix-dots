@@ -96,11 +96,18 @@
         fsType = "btrfs";
       };
       "/var/lib/nixos" = {
+        depends = ["/persistent"];
         device = "/persistent/var/lib/nixos";
         fsType = "none";
-        options = ["bind"];
         neededForBoot = true;
+        options = ["bind"];
+      };
+      "/var/log" = {
         depends = ["/persistent"];
+        device = "/persistent/var/log";
+        fsType = "none";
+        neededForBoot = true;
+        options = ["bind"];
       };
     };
     environment.etc."machine-id".text = "6bba83dbc7c44c879acc6a15582d5e30\n";
