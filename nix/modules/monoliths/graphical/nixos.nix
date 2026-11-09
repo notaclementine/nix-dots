@@ -4,7 +4,10 @@
     pkgs,
     ...
   }: {
-    imports = with self.nixosModules; [headless];
+    imports = with self; [
+      commonModules.graphical
+      nixosModules.headless
+    ];
     environment = {
       etc."tuigreet/config.toml".source = "${self}/not-nix/presets/tuigreet.toml";
       sessionVariables = {
@@ -15,14 +18,9 @@
         QT_STYLE_OVERRIDE = lib.mkForce null;
       };
       systemPackages = with pkgs; [
-        (mpv.override {youtubeSupport = false;})
         alsa-utils
         distrobox
-        firefox
         gimp
-        hunspell
-        hunspellDicts.en_GB-large
-        hunspellDicts.fr-moderne
         imv
         libinput
         liblc3
@@ -32,7 +30,6 @@
         pulseaudio
         qpwgraph
         vulkan-tools
-        zulu
       ];
     };
     programs = {

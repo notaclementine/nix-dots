@@ -1,6 +1,6 @@
 {self, ...}: {
-  flake.hjemModules.murtle-hyprland = {lib, ...}: {
-    imports = with self.hjemModules; [
+  flake.hjemNixosModules.murtle-hyprland = {lib, ...}: {
+    imports = with self.hjemNixosModules; [
       presets-hyprland
       hyprland
     ];

@@ -34,11 +34,47 @@
 in {
   options = {
     flake = flake-parts-lib.mkSubmoduleOptions {
-      hjemModules = mkModulesOption {
-        name = "hjemModules";
+      commonModules = mkModulesOption {
+        name = "commonModules";
+        description = ''
+          Shared bodies for modules of more than one class (nixos, darwin, ...).
+          Hosts never import these directly: a class that a common module works on
+          declares its own wrapper (e.g. `nixosModules.<name>`) that imports it.
+        '';
+      };
+
+      darwinModules = mkModulesOption {
+        name = "darwinModules";
+        class = "darwin";
+        description = ''
+          darwin configuration modules.
+          You may use this for reusable pieces of darwin configuration so that they can be referenced across different host configurations.
+        '';
+      };
+
+      hjemCommonModules = mkModulesOption {
+        name = "hjemCommonModules";
         class = "hjem";
         description = ''
-          hjem configuration modules.
+          Shared bodies for hjem modules used on more than one OS.
+          Users never import these directly: `hjemNixosModules.<name>` and
+          `hjemDarwinModules.<name>` wrap them for the OS they are known to work on.
+        '';
+      };
+
+      hjemDarwinModules = mkModulesOption {
+        name = "hjemDarwinModules";
+        class = "hjem";
+        description = ''
+          hjem configuration modules for users on darwin hosts.
+        '';
+      };
+
+      hjemNixosModules = mkModulesOption {
+        name = "hjemNixosModules";
+        class = "hjem";
+        description = ''
+          hjem configuration modules for users on NixOS hosts.
           You may use this for reusable pieces of hjem configuration so that they can be referenced across different host configurations.
         '';
       };

@@ -2,7 +2,28 @@
   flake = let
     theme = self + "/not-nix/themes/oledppuccin/";
   in {
-    hjemModules.oledppuccin = {
+    hjemCommonModules.oledppuccin = {
+      rum.programs.kitty.settings.include = "oledppuccin.conf";
+      xdg.config.files = {
+        "bat/config".text = "--theme='oledppuccin'";
+        "bat/themes/oledppuccin.tmTheme".source = theme + "bat.tmTheme";
+        "eza/theme.yml".source = theme + "eza.yml";
+        "fish/conf.d/00-theme.fish".text = ''
+          fish_config theme choose oledppuccin
+        '';
+        "fish/themes/oledppuccin.theme".source = theme + "fish.theme";
+        "kitty/diff.conf".source = theme + "kitty/diff.conf";
+        "kitty/oledppuccin.conf".source = theme + "kitty/oledppuccin.conf";
+      };
+    };
+    hjemDarwinModules.oledppuccin = {config, ...}: {
+      imports = with self; [
+        hjemCommonModules.oledppuccin
+        hjemDarwinModules.themes-shared
+      ];
+      environment.sessionVariables.EZA_CONFIG_DIR = "${config.xdg.config.directory}/eza";
+    };
+    hjemNixosModules.oledppuccin = {
       config,
       pkgs,
       ...
@@ -19,21 +40,16 @@
          style=kvantum-dark
       '';
     in {
-      imports = [self.hjemModules.themes-shared];
+      imports = with self; [
+        hjemCommonModules.oledppuccin
+        hjemNixosModules.themes-shared
+      ];
       environment.sessionVariables = {
         BEER_CONFIG = "${config.xdg.config.directory}/beer/beer.toml:${theme}beer.toml";
       };
       packages = [gtkTheme];
-      rum.programs.kitty.settings.include = "oledppuccin.conf";
       xdg = {
         config.files = {
-          "bat/config".text = "--theme='oledppuccin'";
-          "bat/themes/oledppuccin.tmTheme".source = theme + "bat.tmTheme";
-          "eza/theme.yml".source = theme + "eza.yml";
-          "fish/conf.d/00-theme.fish".text = ''
-            fish_config theme choose oledppuccin
-          '';
-          "fish/themes/oledppuccin.theme".source = theme + "fish.theme";
           "gtk-4.0/assets".source = "${gtkTheme}/share/themes/Catppuccin-GTK-Mauve-Dark-BK/gtk-4.0/assets";
           "gtk-4.0/gtk.css".source = "${gtkTheme}/share/themes/Catppuccin-GTK-Mauve-Dark-BK/gtk-4.0/gtk.css";
           "gtk-4.0/gtk-dark.css".source = "${gtkTheme}/share/themes/Catppuccin-GTK-Mauve-Dark-BK/gtk-4.0/gtk-dark.css";
@@ -55,8 +71,6 @@
             gtk-cursor-theme-size=24
             gtk-application-prefer-dark-theme=1
           '';
-          "kitty/diff.conf".source = theme + "kitty/diff.conf";
-          "kitty/oledppuccin.conf".source = theme + "kitty/oledppuccin.conf";
           "jolt/config.toml" = {
             generator = (pkgs.formats.toml {}).generate "config.toml";
             value = {

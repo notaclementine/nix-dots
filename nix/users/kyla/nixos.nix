@@ -7,7 +7,7 @@
     ];
     hjem = {
       users.kyla = {
-        imports = with self.hjemModules; [kyla];
+        imports = with self.hjemNixosModules; [kyla];
         enable = true;
         directory = "/home/kyla";
         user = "kyla";

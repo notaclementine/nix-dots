@@ -18,6 +18,7 @@
         inputs.nix-secrets.nixosModules.default
         inputs.nixos-core.nixosModules.default
         inputs.tack.nixosModules.default
+        self.commonModules.headless
         self.nixosModules.secret-assertions
         self.nixosModules.substituters
       ];
@@ -28,34 +29,14 @@
           NH_ELEVATION_STRATEGY = "run0";
         };
         systemPackages = with pkgs; [
-          inputs'.dix.packages.default
-          inputs'.rom.packages.default
-          age-plugin-fido2-hmac
-          alejandra
-          atool
           cryptsetup
           e2fsprogs
-          eza
-          fastfetch
-          fd
-          file
-          gh
-          httpie
-          hy
-          jujutsu
-          nixfmt
-          nixfmt-tree
-          p7zip
           patchelf
-          ripgrep
           sbctl
           sshfs
-          tree
           usbutils
           waypipe
-          wget
           wl-clipboard
-          yt-dlp
         ];
       };
       fonts = {
@@ -70,26 +51,6 @@
             serif = ["Merriweather"];
           };
         };
-        packages = with pkgs; [
-          atkinson-hyperlegible-mono
-          atkinson-hyperlegible-next
-          liberation_ttf
-          merriweather
-          nerd-fonts.jetbrains-mono
-          noto-fonts
-          noto-fonts-cjk-sans
-          noto-fonts-color-emoji
-          ubuntu-classic
-        ];
-      };
-      hjem = {
-        clobberByDefault = true;
-        extraModules = [
-          inputs.hjem-rum.hjemModules.default
-          ({pkgs, ...}: {
-            _module.args.pkgs = lib.mkDefault pkgs;
-          })
-        ];
       };
       networking = {
         dhcpcd.enable = false;
@@ -98,7 +59,6 @@
         nftables.enable = true;
         useDHCP = false;
       };
-      nix.channel.enable = false;
       nix = {
         extraOptions = ''
           !include ${config.security.nix-secrets.secrets."gh-token".path}
@@ -110,31 +70,18 @@
           experimental-features = [
             "auto-allocate-uids"
             "cgroups"
-            "flakes"
-            "nix-command"
-          ];
-          trusted-public-keys = [
-            "lecache:T6owlM58CGYc8X5xrAMq+IP6ilNWBpWlR8VazPPkjAQ="
           ];
           trusted-users = [
             "root"
             "@wheel"
           ];
-          use-xdg-base-directories = true;
         };
       };
-      nixpkgs.config.allowUnfree = true;
       programs = {
         bat.enable = true;
-        cade.enable = true;
-        fish.enable = true;
         git = {
           enable = true;
           config.credential.helper = ''!f() { if [ "$1" = get ]; then ${pkgs.git}/bin/git credential-store --file=${config.security.nix-secrets.secrets."raf-token".path} get; fi; }; f'';
-        };
-        gnupg.agent = {
-          enable = true;
-          enableSSHSupport = false;
         };
         nh = {
           enable = true;
@@ -237,7 +184,6 @@
           settings.Resolve.LLMNR = "false";
         };
         tailscale = {
-          enable = true;
           openFirewall = true;
           useRoutingFeatures = "client";
         };

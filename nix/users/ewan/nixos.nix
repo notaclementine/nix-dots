@@ -7,7 +7,7 @@
     ];
     hjem = {
       users.ewan = {
-        imports = with self.hjemModules; [ewan];
+        imports = with self.hjemNixosModules; [ewan];
         enable = true;
         directory = "/home/ewan";
         user = "ewan";

@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.hjemModules.presets-hyprland = {
+  flake.hjemNixosModules.presets-hyprland = {
     config,
     lib,
     ...

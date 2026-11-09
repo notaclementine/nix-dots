@@ -1,7 +1,7 @@
 {self, ...}: {
   flake.nixosModules.escapepod3-hjem = {pkgs, ...}: {
     hjem.users.leo = {
-      imports = with self.hjemModules; [
+      imports = with self.hjemNixosModules; [
         escapepod3-hyprland
         modprobed-db
       ];

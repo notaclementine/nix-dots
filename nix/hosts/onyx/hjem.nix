@@ -1,7 +1,7 @@
 {self, ...}: {
   flake.nixosModules.onyx-hjem = {pkgs, ...}: {
     hjem.users.clementine = {
-      imports = with self.hjemModules; [
+      imports = with self.hjemNixosModules; [
         onyx-hyprland
       ];
       packages = with pkgs; [

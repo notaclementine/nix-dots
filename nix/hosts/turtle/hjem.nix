@@ -2,7 +2,7 @@
   flake.nixosModules.turtle-hjem = {pkgs, ...}: {
     hjem.users = {
       aude = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           turtle-hyprland
         ];
         packages = with pkgs; [
@@ -12,7 +12,7 @@
         theme.wallpaper = "your_name-01.png";
       };
       ewan = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           turtle-hyprland
         ];
         packages = with pkgs; [
@@ -25,7 +25,7 @@
         };
       };
       kyla = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           turtle-hyprland
         ];
         packages = with pkgs; [

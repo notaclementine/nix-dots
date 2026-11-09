@@ -7,7 +7,7 @@
     ];
     hjem = {
       users.aude = {
-        imports = with self.hjemModules; [aude];
+        imports = with self.hjemNixosModules; [aude];
         enable = true;
         directory = "/home/aude";
         user = "aude";

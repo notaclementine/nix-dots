@@ -1,6 +1,6 @@
 {self, ...}: {
-  flake.hjemModules.cookie-hyprland = {lib, ...}: {
-    imports = with self.hjemModules; [
+  flake.hjemNixosModules.cookie-hyprland = {lib, ...}: {
+    imports = with self.hjemNixosModules; [
       presets-hyprland
       hyprland
     ];

@@ -1,6 +1,6 @@
 {self, ...}: {
-  flake.hjemModules.ACE-hyprland = {lib, ...}: {
-    imports = with self.hjemModules; [
+  flake.hjemNixosModules.ACE-hyprland = {lib, ...}: {
+    imports = with self.hjemNixosModules; [
       presets-hyprland
       hyprland
     ];

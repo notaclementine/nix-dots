@@ -1,10 +1,13 @@
-{inputs, ...}: {
-  flake.nixosModules.substituters = {
+{
+  inputs,
+  self,
+  ...
+}: {
+  flake.commonModules.substituters = {
     config,
     lib,
     ...
   }: {
-    imports = [inputs.ncro.nixosModules.default];
     services.ncro = {
       enable = true;
       port = 49152;
@@ -75,6 +78,18 @@
 
     # force Nix to exclusively route everything through ncro
     nix.settings.substituters = lib.mkForce ["http://localhost:49152"];
+  };
+
+  flake.darwinModules.substituters.imports = [
+    inputs.ncro.darwinModules.default
+    self.commonModules.substituters
+  ];
+
+  flake.nixosModules.substituters = {
+    imports = [
+      inputs.ncro.nixosModules.default
+      self.commonModules.substituters
+    ];
     system.nixos-core.persistence.stores."/persistent".directories = ["/var/lib/private/ncro"];
   };
 }

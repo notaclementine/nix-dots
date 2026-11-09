@@ -2,7 +2,7 @@
   flake.nixosModules.cookie-hjem = {pkgs, ...}: {
     hjem.users = {
       aude = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           cookie-hyprland
         ];
         packages = with pkgs; [
@@ -12,7 +12,7 @@
         theme.wallpaper = "your_name-01.png";
       };
       kyla = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           cookie-hyprland
         ];
         packages = with pkgs; [

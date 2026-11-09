@@ -1,6 +1,6 @@
 {self, ...}: {
-  flake.hjemModules.aude = {pkgs, ...}: {
-    imports = with self.hjemModules; [
+  flake.hjemNixosModules.aude = {pkgs, ...}: {
+    imports = with self.hjemNixosModules; [
       graphical
       oledppuccin
       vicinae

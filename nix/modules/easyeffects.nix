@@ -1,5 +1,5 @@
 {
-  flake.hjemModules.easyeffects = {pkgs, ...}: {
+  flake.hjemNixosModules.easyeffects = {pkgs, ...}: {
     packages = [pkgs.easyeffects];
     systemd.services.easyeffects = {
       enable = true;

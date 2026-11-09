@@ -1,5 +1,5 @@
 {
-  flake.hjemModules.swaybg = {
+  flake.hjemNixosModules.swaybg = {
     config,
     lib,
     pkgs,

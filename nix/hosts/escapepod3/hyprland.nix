@@ -1,6 +1,6 @@
 {self, ...}: {
-  flake.hjemModules.escapepod3-hyprland = {lib, ...}: {
-    imports = with self.hjemModules; [
+  flake.hjemNixosModules.escapepod3-hyprland = {lib, ...}: {
+    imports = with self.hjemNixosModules; [
       presets-hyprland
       hyprland
     ];

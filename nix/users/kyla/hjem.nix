@@ -1,6 +1,6 @@
 {self, ...}: {
-  flake.hjemModules.kyla = {pkgs, ...}: {
-    imports = with self.hjemModules; [
+  flake.hjemNixosModules.kyla = {pkgs, ...}: {
+    imports = with self.hjemNixosModules; [
       graphical
       oledppuccin
       vicinae

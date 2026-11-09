@@ -70,21 +70,27 @@ small `default.nix` that calls `nixpkgs.lib.nixosSystem`. Shared building blocks
 (defaults, hyprland, oledppuccin, and so on) live in their own files and are
 pulled in by name.
 
-### Registries: hjemModules, nvfModules, secretModules
+### Registries
 
-Three custom flake-parts options act as registries for reusable pieces:
+After adding more modules to my config beside the original `nixosModule` I'm now
+actually more confused on the source of the nixosModule as I see it exists
+outside flake parts as do darwinModules and other ones. So why am I defining
+darwinModules? who knows, I certainly don't. Here are the extra modules I have
+defined:
 
-- `flake.hjemModules` — reusable [hjem](https://github.com/feel-co/hjem) user
-  configuration, tagged with `_class = "hjem"` so it can be imported by name
-  from any host's `hjem.users.<name>`.
+- `flake.darwinModules` — nix-darwin configuration, tagged `_class = "darwin"`.
+- `flake.commonModules` — These are simply for shared code they are never to be
+  imported by a host directly. This is to stop me needing to check if a host can
+  even use the module every time, so when defining commonModules you(only I code
+  this really) must make wrappers for the hosts that can use them.
+- `flake.hjemNixosModules`, `flake.hjemDarwinModules` — reusable
+  [hjem](https://github.com/feel-co/hjem) user configurations quite obvious by
+  the name any new module system will need another one defined.
+- `flake.hjemCommonModules` same as commonModules but for hjem really. All three
+  hjem registries are tagged `_class = "hjem"`.
 - `flake.nvfModules` — reusable Neovim configuration, tagged `_class = "nvf"`,
-  composed together in the `nvim-qwerty` package (see the NVF Modules page).
-- `flake.secretModules` — optional, per-user nix-secrets declarations. See the
-  Secrets page for why these are kept separate from the main `defaults` module.
-
-Each registry is defined once using `flake-parts-lib.mkSubmoduleOptions`, and
-every other file just adds entries to it, e.g.,
-`flake.hjemModules.clementine = { ... };`.
+  composed together in the `nvim-qwerty` package.
+- `flake.secretModules` optional, per-user nix-secrets declarations.
 
 ### Composing a host
 
@@ -135,14 +141,14 @@ config, regardless of whether that host is actually a recipient — a host that
 isn't listed still fails activation instead of just skipping the secret. To
 avoid every host trying (and failing) to decrypt secrets for users it doesn't
 have, each user's secrets live in their own `flake.secretModules.<user>` entry
-(clementine, clementine-eduroam, ewan, kyla, aude), and only the NixOS modules for hosts
-that actually have that user import the relevant one — e.g.
-`self.secretModules.clementine` is only imported by the clementine NixOS module, which
-in turn is only imported by hosts with a clementine account.
+(clementine, clementine-eduroam, ewan, kyla, aude), and only the NixOS modules
+for hosts that actually have that user import the relevant one — e.g.
+`self.secretModules.clementine` is only imported by the clementine NixOS module,
+which in turn is only imported by hosts with a clementine account.
 
-`clementine-eduroam` is a good example of splitting even further: it holds a single
-secret (`clementine/wifi/eduroam`) scoped to lenix and yubikey only, because no
-other host needs eduroam credentials.
+`clementine-eduroam` is a good example of splitting even further: it holds a
+single secret (`clementine/wifi/eduroam`) scoped to lenix and yubikey only,
+because no other host needs eduroam credentials.
 
 ### secret-assertions
 

@@ -2,7 +2,7 @@
   flake.nixosModules.ACE-hjem = {pkgs, ...}: {
     hjem.users = {
       kyla = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           ACE-hyprland
         ];
         packages = with pkgs; [

@@ -1,7 +1,7 @@
 {self, ...}: {
   flake.nixosModules.evilix-hjem = {lib, ...}: {
     hjem.users.clementine = {
-      imports = with self.hjemModules; [
+      imports = with self.hjemNixosModules; [
         oledppuccin
         remote-assets
       ];

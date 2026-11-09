@@ -1,63 +1,16 @@
 {self, ...}: {
-  flake.hjemModules = {
-    clementine-graphical = {
-      osConfig,
-      pkgs,
-      ...
-    }: {
-      imports = with self.hjemModules; [
-        graphical
-        vicinae
-      ];
+  flake.hjemCommonModules = {
+    clementine-graphical = {pkgs, ...}: {
       packages = with pkgs; [
-        (lazyspotify.override {withOo7 = true;})
         halloy
-        libreoffice
         librespot
         obsidian
-        osu-lazer
         prismlauncher
         signal-desktop
         vesktop
       ];
-      xdg.config.files = {
-        "halloy/config.toml" = {
-          generator = (pkgs.formats.toml {}).generate "config.toml";
-          value = {
-            servers = {
-              asahi = {
-                channels = [
-                  "#asahi"
-                  "#asahi-dev"
-                  "#asahi-alt"
-                ];
-                nickname = "eConnah";
-                server = "irc.oftc.net";
-              };
-              nixos = {
-                channels = ["#nixos"];
-                nickname = "eConnah";
-                sasl.plain = {
-                  password_file = osConfig.security.nix-secrets.secrets."clementine/halloy".path;
-                  username = "eConnah";
-                };
-                server = "irc.libera.chat";
-              };
-            };
-          };
-        };
-        "lazyspotify/config.yml".text = ''
-          auth:
-            client_id: a05e9b38cd3e420a87ca1d09b26b7179
-        '';
-        "vesktop/settings/settings.json".source = "${self}/not-nix/clementine/vesktop/settings.json";
-      };
     };
     clementine-headless = {pkgs, ...}: {
-      imports = with self.hjemModules; [
-        headless
-        oledppuccin
-      ];
       environment.sessionVariables.EDITOR = "nvim";
       files = {
         ".ssh/config" = {
@@ -155,5 +108,74 @@
         };
       };
     };
+  };
+
+  flake.hjemDarwinModules = {
+    clementine-graphical.imports = with self; [
+      hjemCommonModules.clementine-graphical
+      hjemDarwinModules.graphical
+      hjemDarwinModules.vicinae
+    ];
+    clementine-headless.imports = with self; [
+      hjemCommonModules.clementine-headless
+      hjemDarwinModules.headless
+      hjemDarwinModules.oledppuccin
+    ];
+  };
+
+  flake.hjemNixosModules = {
+    clementine-graphical = {
+      osConfig,
+      pkgs,
+      ...
+    }: {
+      imports = with self; [
+        hjemCommonModules.clementine-graphical
+        hjemNixosModules.graphical
+        hjemNixosModules.vicinae
+      ];
+      packages = with pkgs; [
+        (lazyspotify.override {withOo7 = true;})
+        libreoffice
+        osu-lazer
+      ];
+      xdg.config.files = {
+        "halloy/config.toml" = {
+          generator = (pkgs.formats.toml {}).generate "config.toml";
+          value = {
+            servers = {
+              asahi = {
+                channels = [
+                  "#asahi"
+                  "#asahi-dev"
+                  "#asahi-alt"
+                ];
+                nickname = "eConnah";
+                server = "irc.oftc.net";
+              };
+              nixos = {
+                channels = ["#nixos"];
+                nickname = "eConnah";
+                sasl.plain = {
+                  password_file = osConfig.security.nix-secrets.secrets."clementine/halloy".path;
+                  username = "eConnah";
+                };
+                server = "irc.libera.chat";
+              };
+            };
+          };
+        };
+        "lazyspotify/config.yml".text = ''
+          auth:
+            client_id: a05e9b38cd3e420a87ca1d09b26b7179
+        '';
+        "vesktop/settings/settings.json".source = "${self}/not-nix/clementine/vesktop/settings.json";
+      };
+    };
+    clementine-headless.imports = with self; [
+      hjemCommonModules.clementine-headless
+      hjemNixosModules.headless
+      hjemNixosModules.oledppuccin
+    ];
   };
 }

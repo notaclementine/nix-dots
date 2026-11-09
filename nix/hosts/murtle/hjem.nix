@@ -2,7 +2,7 @@
   flake.nixosModules.murtle-hjem = {pkgs, ...}: {
     hjem.users = {
       ewan = {
-        imports = with self.hjemModules; [
+        imports = with self.hjemNixosModules; [
           murtle-hyprland
         ];
         packages = with pkgs; [

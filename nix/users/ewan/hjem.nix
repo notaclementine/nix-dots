@@ -1,10 +1,10 @@
 {self, ...}: {
-  flake.hjemModules.ewan = {
+  flake.hjemNixosModules.ewan = {
     pkgs,
     lib,
     ...
   }: {
-    imports = with self.hjemModules; [
+    imports = with self.hjemNixosModules; [
       graphical
       oledppuccin
       vicinae

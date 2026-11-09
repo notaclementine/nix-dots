@@ -1,5 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.hjemModules.beer = moduleWithSystem ({inputs'}: {lib, ...}: let
+  flake.hjemNixosModules.beer = moduleWithSystem ({inputs'}: {lib, ...}: let
     beer = inputs'.beer.packages.default;
   in {
     packages = [beer];

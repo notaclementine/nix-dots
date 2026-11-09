@@ -5,7 +5,7 @@
     ];
     hjem = {
       users.leo = {
-        imports = [self.hjemModules.leo];
+        imports = [self.hjemNixosModules.leo];
         enable = true;
         directory = "/home/leo";
         user = "leo";

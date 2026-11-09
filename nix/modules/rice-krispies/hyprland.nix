@@ -1,6 +1,6 @@
 {inputs, ...}: {
   flake = {
-    hjemModules.hyprland = {
+    hjemNixosModules.hyprland = {
       config,
       lib,
       pkgs,

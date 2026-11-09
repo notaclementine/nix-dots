@@ -1,5 +1,5 @@
-{
-  flake.hjemModules.remote-assets = {
+{self, ...}: {
+  flake.hjemCommonModules.remote-assets = {
     lib,
     pkgs,
     ...
@@ -97,4 +97,7 @@
       };
     };
   };
+
+  flake.hjemDarwinModules.remote-assets.imports = [self.hjemCommonModules.remote-assets];
+  flake.hjemNixosModules.remote-assets.imports = [self.hjemCommonModules.remote-assets];
 }

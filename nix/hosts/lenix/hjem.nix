@@ -1,7 +1,7 @@
 {self, ...}: {
   flake.nixosModules.lenix-hjem = {pkgs, ...}: {
     hjem.users.clementine = {
-      imports = with self.hjemModules; [
+      imports = with self.hjemNixosModules; [
         lenix-hyprland
         modprobed-db
       ];
