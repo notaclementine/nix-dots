@@ -5,6 +5,7 @@
     "brewery": "git+https://git.notashelf.dev/notashelf/brewery.git",
     "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
+    "darwin": "github:nix-darwin/nix-darwin/master",
     "disko": "github:nix-community/disko",
     "dix": "github:manic-systems/dix",
     "flake-parts": "github:hercules-ci/flake-parts",
@@ -66,6 +67,14 @@
     "rev": "90e6328cad33a463bba74dc046be09848a4ae868",
     "narHash": "sha256-w5sdalq2PbuCrCaglUXJsvQkfjvZPYiDgdYZVlyTDsk=",
     "lastModified": 1793402889
+  },
+  "darwin": {
+    "type": "github",
+    "owner": "nix-darwin",
+    "repo": "nix-darwin",
+    "rev": "ff0e21a414d4547183396da1b44a66f2577b65e9",
+    "narHash": "sha256-+RpTlcdh9KqZ+ZiLkNSTvibQWm935EcIdBzRPCTFsrQ=",
+    "lastModified": 1793418699
   },
   "disko": {
     "type": "github",

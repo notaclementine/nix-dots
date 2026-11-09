@@ -109,6 +109,8 @@ type = "fetch"
 # other stuff
 [inputs.apple-silicon]
 url = "github:nix-community/nixos-apple-silicon"
+[inputs.darwin]
+url = "github:nix-darwin/nix-darwin/master"
 [inputs.disko]
 url = "github:nix-community/disko"
 [inputs.flake-parts]
