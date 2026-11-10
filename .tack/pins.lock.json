@@ -2,6 +2,7 @@
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
     "beer": "git+https://git.notashelf.dev/notashelf/beer.git",
+    "bootvine": "git+https://codeberg.org/wvhulle/bootvine",
     "brewery": "git+https://git.notashelf.dev/notashelf/brewery.git",
     "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
@@ -41,6 +42,14 @@
     "lastModified": 1794035880,
     "tag": "0.14.0",
     "version": "0.14.0"
+  },
+  "bootvine": {
+    "type": "git",
+    "url": "https://codeberg.org/wvhulle/bootvine",
+    "ref": "HEAD",
+    "rev": "a7e33b453a82ecfe9e98d060008b3b20b6924f62",
+    "narHash": "sha256-aPJtMiIqt8tb+ZsgKhVH3zmGWjRRzukUzXj64X1mhpI=",
+    "lastModified": 1794257658
   },
   "brewery": {
     "type": "git",

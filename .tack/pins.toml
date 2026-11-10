@@ -65,6 +65,8 @@ patches = ["patches/nixpkgs/temp.patch"]
 url = "git+https://git.notashelf.dev/notashelf/beer.git"
 tag = "{version}"
 group = "mania"
+[inputs.bootvine]
+url = "git+https://codeberg.org/wvhulle/bootvine"
 [inputs.brewery]
 url = "git+https://git.notashelf.dev/notashelf/brewery.git"
 tag = "{version}"
