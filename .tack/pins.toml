@@ -65,6 +65,8 @@ patches = ["patches/nixpkgs/temp.patch"]
 url = "git+https://git.notashelf.dev/notashelf/beer.git"
 tag = "{version}"
 group = "mania"
+[inputs.bootvine]
+url = "git+https://codeberg.org/wvhulle/bootvine"
 [inputs.brewery]
 url = "git+https://git.notashelf.dev/notashelf/brewery.git"
 tag = "{version}"
@@ -123,5 +125,7 @@ url = "github:hyprwm/hyprland"
 url = "git+https://git.lix.systems/lix-project/lix"
 [inputs.nix-secrets]
 url = "github:unnamed-systems/nix-secrets"
+[inputs.vicinae]
+url = "github:vicinaehq/vicinae"
 [inputs.wsl]
 url = "github:nix-community/NixOS-WSL"

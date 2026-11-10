@@ -95,6 +95,13 @@
         neededForBoot = true;
         depends = ["/persistent"];
       };
+      "/var/log" = {
+        depends = ["/persistent"];
+        device = "/persistent/var/log";
+        fsType = "none";
+        neededForBoot = true;
+        options = ["bind"];
+      };
     };
   };
 }

@@ -2,6 +2,7 @@
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
     "beer": "git+https://git.notashelf.dev/notashelf/beer.git",
+    "bootvine": "git+https://codeberg.org/wvhulle/bootvine",
     "brewery": "git+https://git.notashelf.dev/notashelf/brewery.git",
     "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
@@ -22,6 +23,7 @@
     "rom": "github:manic-systems/rom",
     "super-secret": "github:notaclementine/secrets",
     "tack": "github:manic-systems/tack",
+    "vicinae": "github:vicinaehq/vicinae",
     "wsl": "github:nix-community/NixOS-WSL"
   },
   "apple-silicon": {
@@ -41,6 +43,14 @@
     "lastModified": 1794035880,
     "tag": "0.14.0",
     "version": "0.14.0"
+  },
+  "bootvine": {
+    "type": "git",
+    "url": "https://codeberg.org/wvhulle/bootvine",
+    "ref": "HEAD",
+    "rev": "a7e33b453a82ecfe9e98d060008b3b20b6924f62",
+    "narHash": "sha256-aPJtMiIqt8tb+ZsgKhVH3zmGWjRRzukUzXj64X1mhpI=",
+    "lastModified": 1794257658
   },
   "brewery": {
     "type": "git",
@@ -237,6 +247,14 @@
     "rev": "cd02f41558f0ccf8b1ae67fd96950ed0e6553129",
     "narHash": "sha256-NkEQK3h5pn39Cj4zMf/EYoxUo0/SNnkR0yGaYvJ96DA=",
     "lastModified": 1794039014
+  },
+  "vicinae": {
+    "type": "github",
+    "owner": "vicinaehq",
+    "repo": "vicinae",
+    "rev": "84a0086f0e589576c3c55a211579e63c20d83e59",
+    "narHash": "sha256-GyN4K/lOaRRO2RkFJS5dVmpNX7xsrVbclzBfxd3mxtU=",
+    "lastModified": 1794153382
   },
   "wsl": {
     "type": "github",

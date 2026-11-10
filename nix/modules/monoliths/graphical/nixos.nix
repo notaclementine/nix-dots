@@ -1,12 +1,17 @@
-{self, ...}: {
+{
+  inputs,
+  self,
+  ...
+}: {
   flake.nixosModules.graphical = {
     lib,
     pkgs,
     ...
   }: {
-    imports = with self; [
-      commonModules.graphical
-      nixosModules.headless
+    imports = [
+      inputs.bootvine.nixosModules.default
+      self.commonModules.graphical
+      self.nixosModules.headless
     ];
     environment = {
       etc."tuigreet/config.toml".source = "${self}/not-nix/presets/tuigreet.toml";
@@ -67,6 +72,7 @@
       soteria.enable = true;
     };
     services = {
+      bootvine.enable = true;
       flatpak.enable = lib.mkDefault true;
       greetd = {
         enable = true;

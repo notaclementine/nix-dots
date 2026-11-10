@@ -22,7 +22,10 @@
           python3
         ];
       };
-      networking.hostName = "evilix";
+      networking = {
+        hostName = "evilix";
+        firewall.trustedInterfaces = ["loopback0"];
+      };
       systemd.user.targets = {
         "graphical-session".unitConfig.RefuseManualStart = false;
         "graphical-session-pre".unitConfig.RefuseManualStart = false;

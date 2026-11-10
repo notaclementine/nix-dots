@@ -34,8 +34,10 @@
               mountOptions = ["noatime"];
               mountpoint = "/persistent";
               postMountHook = ''
-                mkdir -p /mnt/persistent/nix
                 mkdir -p /mnt/nix
+                mkdir -p /mnt/persistent/nix
+                mkdir -p /mnt/persistent/var/lib/nixos
+                mkdir -p /mnt/persistent/var/log
                 mount --bind /mnt/persistent/nix /mnt/nix
               '';
               type = "filesystem";
@@ -83,11 +85,18 @@
       };
       "/persistent".neededForBoot = true;
       "/var/lib/nixos" = {
+        depends = ["/persistent"];
         device = "/persistent/var/lib/nixos";
         fsType = "none";
-        options = ["bind"];
         neededForBoot = true;
+        options = ["bind"];
+      };
+      "/var/log" = {
         depends = ["/persistent"];
+        device = "/persistent/var/log";
+        fsType = "none";
+        neededForBoot = true;
+        options = ["bind"];
       };
     };
     boot.initrd = {
