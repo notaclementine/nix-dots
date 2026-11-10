@@ -93,6 +93,7 @@
         };
         python.enable = true;
         rust.enable = true;
+        toml.enable = true;
         xml.enable = true;
       };
       lsp = {
