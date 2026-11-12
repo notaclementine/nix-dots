@@ -1,9 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.nixosModules.escapepod3-config = moduleWithSystem ({self', ...}: {
-    lib,
-    pkgs,
-    ...
-  }: {
+  flake.nixosModules.escapepod3-config = moduleWithSystem ({self', ...}: {pkgs, ...}: {
     boot = {
       initrd.kernelModules = ["lz4"];
       kernel.sysctl = {
@@ -48,7 +44,9 @@
       nh.flake = "/home/leo/Documents/dotfiles";
       steam.enable = false;
     };
-    security.nix-secrets.enable = lib.mkForce false;
+    security.nix-secrets.identityPaths = [
+      "/persistent/secrets/leo/age-identity.txt" # uh I forgot u weren't on impermenance but doesn't matter
+    ];
     swapDevices = [{device = "/swap/swapfile";}];
     time.timeZone = "Europe/London";
   });

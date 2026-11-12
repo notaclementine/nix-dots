@@ -111,6 +111,7 @@
             all-hosts = [
               "ACE"
               "cookie"
+              "escapepod3"
               "lenix"
               "murtle"
               "onyx"
@@ -120,7 +121,7 @@
             ];
             ACE = "age1qa58lk685uwd9s8g3evvh9kyaf48rj0pggnsx6gc8nza4redx52qgrqyc0";
             cookie = "age17tdwsudlll0ykq4xlhpm758nlawnzt43kcefp6af3vkaczperahsqslydt";
-            escapepod3 = "age1REPLACE_ME";
+            escapepod3 = "age1vfznp3e6xn0cr2mef2dpd2ml8egp3dx67t80ah4ggdmm5z33ncjqfu55r3";
             lenix = "age1xpg656d826awgldew9svunr9r4r8rdmf8fz7zgjlgmpd809q5flsavsmkd";
             murtle = "age1eqm8wgfpc8aawaxardpypg5gcdluavplfy7gn2qp9tefwauezs2sd69wvl";
             onyx = "age1vx67nthmpprcv7mws3rvp6wtqe23td8rkxvexhvay0gvsqse0saqquv2fe";
