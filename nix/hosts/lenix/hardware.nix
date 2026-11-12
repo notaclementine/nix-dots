@@ -95,20 +95,6 @@
         device = "/dev/disk/by-uuid/31955c6c-b21a-48f1-aa60-b2e9ac155e28";
         fsType = "btrfs";
       };
-      "/var/lib/nixos" = {
-        depends = ["/persistent"];
-        device = "/persistent/var/lib/nixos";
-        fsType = "none";
-        neededForBoot = true;
-        options = ["bind"];
-      };
-      "/var/log" = {
-        depends = ["/persistent"];
-        device = "/persistent/var/log";
-        fsType = "none";
-        neededForBoot = true;
-        options = ["bind"];
-      };
     };
     environment.etc."machine-id".text = "6bba83dbc7c44c879acc6a15582d5e30\n";
     nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";

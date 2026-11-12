@@ -39,7 +39,7 @@
       "jj/config.toml" = {
         generator = (pkgs.formats.toml {}).generate "config.toml";
         value = {
-          alias = {
+          aliases = {
             pull-pr = {
               definition = [
                 "util"

@@ -88,20 +88,6 @@
     fileSystems = {
       "/nix".neededForBoot = true;
       "/persistent".neededForBoot = true;
-      "/var/lib/nixos" = {
-        device = "/persistent/var/lib/nixos";
-        fsType = "none";
-        options = ["bind"];
-        neededForBoot = true;
-        depends = ["/persistent"];
-      };
-      "/var/log" = {
-        depends = ["/persistent"];
-        device = "/persistent/var/log";
-        fsType = "none";
-        neededForBoot = true;
-        options = ["bind"];
-      };
     };
   };
 }

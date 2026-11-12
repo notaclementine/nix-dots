@@ -84,20 +84,6 @@
         neededForBoot = true;
       };
       "/persistent".neededForBoot = true;
-      "/var/lib/nixos" = {
-        depends = ["/persistent"];
-        device = "/persistent/var/lib/nixos";
-        fsType = "none";
-        neededForBoot = true;
-        options = ["bind"];
-      };
-      "/var/log" = {
-        depends = ["/persistent"];
-        device = "/persistent/var/log";
-        fsType = "none";
-        neededForBoot = true;
-        options = ["bind"];
-      };
     };
     boot.initrd = {
       supportedFilesystems = ["f2fs"];
