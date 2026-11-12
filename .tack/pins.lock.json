@@ -138,25 +138,25 @@
     "type": "github",
     "owner": "hyprwm",
     "repo": "hyprland",
-    "rev": "70ec30e71656bce5e1af3364129421a4386a69e1",
-    "narHash": "sha256-z4JcvSa6Q2R+Qs6zGRV5MlTLaatVpl1nzD2zc+pOWwo=",
-    "lastModified": 1794422235
+    "rev": "b824d2ae27ec5b89fd0a45e6c571998f2806116c",
+    "narHash": "sha256-SkI2j/qa2cnBcdrZDoxfsV1c7guctxwBo1sU1W0meXg=",
+    "lastModified": 1794512199
   },
   "lix": {
     "type": "git",
     "url": "https://git.lix.systems/lix-project/lix",
     "ref": "HEAD",
-    "rev": "33c14cfacb649bc875e3a8f122f6c80477bcb697",
-    "narHash": "sha256-YMfOx58xxdaFUZ40InUTs00tVFpcihH6QTq0eoHcBJg=",
-    "lastModified": 1794445553
+    "rev": "36fcfeae3c4fd3f59b1b49e35dafd1630e3b281b",
+    "narHash": "sha256-EiQvI3CcMTzGsqUdhRc3vjTKZK+/kLuvTSnkXAe6PI0=",
+    "lastModified": 1794515455
   },
   "ncro": {
     "type": "github",
     "owner": "manic-systems",
     "repo": "ncro",
-    "rev": "fe2c210e0e2626b1c8226df512c70facd06d56c5",
-    "narHash": "sha256-M0hsXrApb7mXibwrb4FBvndKjlTJ0vPmWifuv8MJ6g0=",
-    "lastModified": 1794417506
+    "rev": "1e7d0637a28e4d100381b1248fc0dfe15c367aad",
+    "narHash": "sha256-IkzejeEUm6Wm7O4SpPRovFfWNoLQ/R08vnwSGiZVuxE=",
+    "lastModified": 1794486500
   },
   "nh": {
     "type": "github",
@@ -184,14 +184,14 @@
   },
   "nixpkgs": {
     "type": "tarball",
-    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1114946.177d0540942f/nixexprs.tar.zst?rev=177d0540942fb205af6993b1d5fa0b57799e09f8&lastModified=1794192123",
-    "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
-    "narHash": "sha256-YOhabADcIwaWo9992egosQF3iVpvWysmZAyhbGBzinY=",
-    "lastModified": 1794192123,
+    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1117658.d4f25a3e5620/nixexprs.tar.zst?rev=d4f25a3e562008648d45bcf2d70bcc7422cad84e&lastModified=1794386569",
+    "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
+    "narHash": "sha256-W60urNAgQVS8bhNWH0bQsYoiagds8m38oTDUjEOM9FE=",
+    "lastModified": 1794386569,
     "patched": {
-      "path": "/nix/store/9228iclncr4zvvaa2ssba65kz949fgg5-source",
-      "narHash": "sha256-HXxJ1XBsWby7BundrJPzS+Xr+qD2GjHw181tCmWh1hM=",
-      "lastModified": 1794192123,
+      "path": "/nix/store/33s7z1apbb45bg7wnwm7wyjz0j5bn86i-source",
+      "narHash": "sha256-yuZSR5gMUI39b8/BiwFNwhM8IlzMazDNbCD8VHmsAuw=",
+      "lastModified": 1794386569,
       "patches": [
         {
           "source": "patches/nixpkgs/temp.patch",
@@ -206,9 +206,9 @@
     "type": "github",
     "owner": "notashelf",
     "repo": "nvf",
-    "rev": "dd06c9b6aac414bf7cd7594b27108439f5caa95b",
-    "narHash": "sha256-IjBiWJHKiuhMQ/xsdHYGbxK6AXac4TIWYM1DODRnkEk=",
-    "lastModified": 1794268150
+    "rev": "08451b91e6a030f12e736c51c28dfde3371a8428",
+    "narHash": "sha256-KTihP+mF+Gr0GdGU6SoN4LDe8d72fD9MNaGUqX1kR/8=",
+    "lastModified": 1794492056
   },
   "rom": {
     "type": "github",
