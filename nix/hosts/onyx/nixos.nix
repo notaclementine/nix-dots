@@ -6,7 +6,7 @@
       ...
     }: {
       boot = {
-        kernelPackages = pkgs.linuxPackages_zen;
+        kernelPackages = pkgs.linuxPackages_latest;
         extraModulePackages = [config.boot.kernelPackages.r8125];
         blacklistedKernelModules = ["r8169"];
         extraModprobeConfig = ''

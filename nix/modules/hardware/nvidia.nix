@@ -2,6 +2,7 @@
   flake.nixosModules.nvidia = {
     imports = [self.nixosModules.mesa];
     hardware.nvidia = {
+      branch = "bleeding_edge";
       modesetting.enable = true;
       open = true;
     };

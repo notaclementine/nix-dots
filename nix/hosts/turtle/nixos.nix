@@ -5,7 +5,7 @@
     ...
   }: {
     boot = {
-      kernelPackages = pkgs.linuxPackages_zen;
+      kernelPackages = pkgs.linuxPackages_latest;
       loader.limine = {
         resolution = "1920x1080x32";
         style.interface.resolution = "1920x1080";
