@@ -48,9 +48,9 @@
     "type": "git",
     "url": "https://codeberg.org/wvhulle/bootvine",
     "ref": "HEAD",
-    "rev": "a7e33b453a82ecfe9e98d060008b3b20b6924f62",
-    "narHash": "sha256-aPJtMiIqt8tb+ZsgKhVH3zmGWjRRzukUzXj64X1mhpI=",
-    "lastModified": 1794257658
+    "rev": "9c39b7be4ebb0d6df6f970aebe7c3e9afcb180e6",
+    "narHash": "sha256-wnxSQLBKrzIdNVFcAV0Anr4g5VYf8M6uCTZVqT4OfnM=",
+    "lastModified": 1794575400
   },
   "brewery": {
     "type": "git",
@@ -122,9 +122,9 @@
     "type": "github",
     "owner": "feel-co",
     "repo": "hjem",
-    "rev": "28cec3017cc94842f919f8f294c8b7136216b79b",
-    "narHash": "sha256-tttNqwFIXsClznNv3uEltACsfBm8xIDo9bPl+BHqYZc=",
-    "lastModified": 1794190356
+    "rev": "5469a3ae3cd5cc182ddc4201a21a8de44b2c26f2",
+    "narHash": "sha256-N6aGkpxbDeisIUygDapIVX2aXZuGEK4kRmUPMhtu1zc=",
+    "lastModified": 1794572558
   },
   "hjem-rum": {
     "type": "github",
@@ -138,9 +138,9 @@
     "type": "github",
     "owner": "hyprwm",
     "repo": "hyprland",
-    "rev": "b824d2ae27ec5b89fd0a45e6c571998f2806116c",
-    "narHash": "sha256-SkI2j/qa2cnBcdrZDoxfsV1c7guctxwBo1sU1W0meXg=",
-    "lastModified": 1794512199
+    "rev": "0767f6347a69607638a4f93b3cd613af15a121e0",
+    "narHash": "sha256-1I8u6r86xSBRVUd6qTFBffifRqS/DcUv4n7pdtL9M8c=",
+    "lastModified": 1794583226
   },
   "lix": {
     "type": "git",
@@ -154,9 +154,9 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "ncro",
-    "rev": "1e7d0637a28e4d100381b1248fc0dfe15c367aad",
-    "narHash": "sha256-IkzejeEUm6Wm7O4SpPRovFfWNoLQ/R08vnwSGiZVuxE=",
-    "lastModified": 1794486500
+    "rev": "ad44cfbc00a6ed1fff20bb09407f21144f5d27fd",
+    "narHash": "sha256-/sw6LJGSbIytu/z/DX4mJYHfyNC2ZqOor1rxoEN5tD0=",
+    "lastModified": 1794564469
   },
   "nh": {
     "type": "github",
@@ -212,9 +212,9 @@
     "type": "github",
     "owner": "notashelf",
     "repo": "nvf",
-    "rev": "08451b91e6a030f12e736c51c28dfde3371a8428",
-    "narHash": "sha256-KTihP+mF+Gr0GdGU6SoN4LDe8d72fD9MNaGUqX1kR/8=",
-    "lastModified": 1794492056
+    "rev": "d38e36c2513337b56a3b16af268c7a3f2d33de7a",
+    "narHash": "sha256-EOYKot/+xy+p+5cd3+1EeR7nz1FevIkxC/Hs6TbndWg=",
+    "lastModified": 1794522644
   },
   "rom": {
     "type": "github",
@@ -236,9 +236,9 @@
     "type": "github",
     "owner": "notaclementine",
     "repo": "secrets",
-    "rev": "7f01f675c8aa5ff07917998535973bd0fa1395fa",
-    "narHash": "sha256-A0pZzG0WlfU68mqhp3PZ+rN/mqkYkhm45HfYqXKiYpI=",
-    "lastModified": 1794516890,
+    "rev": "3e2c04b85d7fb96eace28be923c2a43f412bd3ff",
+    "narHash": "sha256-Ydr/WGgumD9/sFEpHo9usw/a6vZh5VNMgN8YJJMcg0M=",
+    "lastModified": 1794521376,
     "archive": null,
     "signedBy": {
       "signer": "clementine",
