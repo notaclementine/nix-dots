@@ -20,6 +20,7 @@
         description = "Leo Chittock";
         extraGroups = [
           "dialout"
+          "rafware"
           "uucp"
           "wheel"
         ];

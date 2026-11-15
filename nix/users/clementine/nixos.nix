@@ -35,6 +35,7 @@
             "dialout"
             "input"
             "la-famille"
+            "rafware"
             "uucp"
             "wheel"
           ];

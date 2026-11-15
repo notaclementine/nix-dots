@@ -23,6 +23,7 @@
         extraGroups = [
           "dialout"
           "la-famille"
+          "rafware"
           "uucp"
           "wheel"
         ];

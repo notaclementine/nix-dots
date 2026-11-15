@@ -79,10 +79,7 @@
       };
       programs = {
         bat.enable = true;
-        git = {
-          enable = true;
-          config.credential.helper = ''!f() { if [ "$1" = get ]; then ${pkgs.git}/bin/git credential-store --file=${config.security.nix-secrets.secrets."raf-token".path} get; fi; }; f'';
-        };
+        git.enable = true;
         nh = {
           enable = true;
           package = inputs'.nh.packages.default;
@@ -91,7 +88,18 @@
             extraArgs = "--keep-since 4d --keep 10";
           };
         };
-        ssh.startAgent = true;
+        ssh = {
+          startAgent = true;
+          knownHosts."[git.notashelf.dev]:33".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGGK5gXiYMOaN7quJwoZOsAhNJNCNnup/XbGqOjwRAaI";
+          extraConfig = ''
+            Host git.notashelf.dev
+              HostName git.notashelf.dev
+              IdentitiesOnly yes
+              IdentityFile ${config.security.nix-secrets.secrets."raf-token".path}
+              Port 33
+              User git
+          '';
+        };
         tack = {
           enable = true;
           nixConfTokens = true;
@@ -136,7 +144,9 @@
             };
             "raf-token" = {
               recipients = ["all-hosts"];
-              mode = "0444";
+              owner = "nobody";
+              group = "rafware";
+              mode = "0440";
             };
             "nix-cache-key".recipients = ["all-hosts"];
           };
@@ -237,7 +247,10 @@
         services."user@".serviceConfig.LimitMEMLOCK = "infinity";
         user.services."dbus-org.freedesktop.secrets".enable = false;
       };
-      users.groups."la-famille".gid = 2018;
+      users.groups = {
+        la-famille.gid = 2018;
+        rafware.gid = 6767;
+      };
       xdg.mime = {
         enable = true;
         defaultApplications = {

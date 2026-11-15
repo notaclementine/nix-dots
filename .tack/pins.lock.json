@@ -1,9 +1,9 @@
 {
   "$declared": {
     "apple-silicon": "github:nix-community/nixos-apple-silicon",
-    "beer": "git+https://git.notashelf.dev/notashelf/beer.git",
+    "beer": "git+ssh://git@git.notashelf.dev:33/notashelf/beer.git",
     "bootvine": "git+https://codeberg.org/wvhulle/bootvine",
-    "brewery": "git+https://git.notashelf.dev/notashelf/brewery.git",
+    "brewery": "git+ssh://git@git.notashelf.dev:33/notashelf/brewery.git",
     "cade": "github:manic-systems/cade",
     "circus": "github:manic-systems/circus",
     "darwin": "github:nix-darwin/nix-darwin/master",
@@ -36,13 +36,13 @@
   },
   "beer": {
     "type": "git",
-    "url": "https://git.notashelf.dev/notashelf/beer.git",
-    "ref": "refs/tags/0.14.0",
-    "rev": "46c5418168b4a42cde0e03b2fb9008a6e40b8727",
-    "narHash": "sha256-ncG3INFf43HBVsqyTsr55jJF3+fqfwnfwEL33WRb8rM=",
-    "lastModified": 1794035880,
-    "tag": "0.14.0",
-    "version": "0.14.0"
+    "url": "ssh://git@git.notashelf.dev:33/notashelf/beer.git",
+    "ref": "refs/tags/0.14.1",
+    "rev": "9614b5d9c57c92e24e0ec8cd4a32d818ba752aad",
+    "narHash": "sha256-GgrnGZxm0FwkRG/jCHvmIBvtEpdrg+4zg8WF1jLk/oc=",
+    "lastModified": 1794263832,
+    "tag": "0.14.1",
+    "version": "0.14.1"
   },
   "bootvine": {
     "type": "git",
@@ -54,13 +54,13 @@
   },
   "brewery": {
     "type": "git",
-    "url": "https://git.notashelf.dev/notashelf/brewery.git",
-    "ref": "refs/tags/1.14.0",
-    "rev": "3ad5ca09e443f8bfe31075cbe2cf2db5aed4205a",
-    "narHash": "sha256-OnQVOJ+5/yP7lli35Drk6IT7mTpro9ydfGC1WntBUQ4=",
-    "lastModified": 1793438390,
-    "tag": "1.14.0",
-    "version": "1.14.0"
+    "url": "ssh://git@git.notashelf.dev:33/notashelf/brewery.git",
+    "ref": "refs/tags/1.16.0",
+    "rev": "0aa0360ff6c5e5876dc08f3cfdd9523afa4215cc",
+    "narHash": "sha256-eBeQF4ZUm1vPIKT3Wy2XTtxwOoD6TBQmV9opDAqvQiY=",
+    "lastModified": 1794505805,
+    "tag": "1.16.0",
+    "version": "1.16.0"
   },
   "cade": {
     "type": "github",
@@ -236,14 +236,14 @@
     "type": "github",
     "owner": "notaclementine",
     "repo": "secrets",
-    "rev": "3e2c04b85d7fb96eace28be923c2a43f412bd3ff",
-    "narHash": "sha256-Ydr/WGgumD9/sFEpHo9usw/a6vZh5VNMgN8YJJMcg0M=",
-    "lastModified": 1794521376,
+    "rev": "b75de395afb6edc4e59451af31f3532cd434f7da",
+    "narHash": "sha256-Km1OmIiMDTf5yAe2glw29wXTWbieMrisnz/Jh2J3uao=",
+    "lastModified": 1794777284,
     "archive": null,
     "signedBy": {
       "signer": "clementine",
       "keys": "sha256-abd58ec74b824c69f55fc328e1a814f736ffc69fc689d61321256af9944c3e63",
-      "since": "e9b299177e22f814e58ee3bc8e347f50662fbc56"
+      "since": "b75de395afb6edc4e59451af31f3532cd434f7da"
     }
   },
   "tack": {

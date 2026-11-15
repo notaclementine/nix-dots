@@ -114,5 +114,12 @@
         serviceConfig.LimitNOFILE = 65536;
       };
     };
+
+    users.groups.rafware.members = [
+      "circus"
+      "circus-evaluator"
+      "circus-queue-runner"
+      "circus-server"
+    ];
   };
 }
