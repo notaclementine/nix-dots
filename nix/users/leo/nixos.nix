@@ -19,9 +19,9 @@
       users.leo = {
         description = "Leo Chittock";
         extraGroups = [
-          "wheel"
           "dialout"
           "uucp"
+          "wheel"
         ];
         group = "leo";
         isNormalUser = true;

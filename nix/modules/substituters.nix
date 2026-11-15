@@ -32,7 +32,7 @@
               public_key = "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=";
             }
             {
-              url = "https://ci.manic.systems";
+              url = "https://ci.manic.systems/nix-cache";
               priority = 20;
               public_key = "ci.manic.systems-1:s6OZanN8Us8vRi0jVivP3qlMn0cYHBjBALKrNe5nH8s=";
             }
