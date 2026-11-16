@@ -236,9 +236,9 @@
     "type": "github",
     "owner": "notaclementine",
     "repo": "secrets",
-    "rev": "b75de395afb6edc4e59451af31f3532cd434f7da",
-    "narHash": "sha256-Km1OmIiMDTf5yAe2glw29wXTWbieMrisnz/Jh2J3uao=",
-    "lastModified": 1794777284,
+    "rev": "ce47de3ff3217fce067c23b63fa4d2005dbb3a0f",
+    "narHash": "sha256-YyIYcprwnZmxr3Q1CnLzY0O1Ym66sJ6uFS92svyJRT8=",
+    "lastModified": 1794799486,
     "archive": null,
     "signedBy": {
       "signer": "clementine",

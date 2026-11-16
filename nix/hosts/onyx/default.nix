@@ -5,6 +5,7 @@
 }: {
   flake.nixosConfigurations.onyx = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
+      circus-agent
       clementine-graphical
       graphical
       hyprland

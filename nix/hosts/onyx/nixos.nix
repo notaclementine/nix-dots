@@ -36,7 +36,7 @@
       nix.settings = {
         cores = 0;
         http-connections = 100;
-        max-jobs = 2;
+        max-jobs = 4;
         secret-key-files = [config.security.nix-secrets.secrets."nix-cache-key".path];
       };
       programs = {
@@ -53,12 +53,22 @@
         ];
         storagePath = "/persistent/secrets";
       };
-      services.pipewire.extraConfig.pipewire."92-custom-quantum" = {
-        "context.properties" = {
-          "default.clock.max-quantum" = 8192;
-          "default.clock.min-quantum" = 512;
-          "default.clock.quantum" = 512;
-          "default.clock.rate" = 48000;
+      services = {
+        circus-agent = {
+          settings.agent = {
+            name = "onyx";
+            systems = ["x86_64-linux"];
+            max_jobs = 4;
+            speed_factor = 4.0;
+          };
+        };
+        pipewire.extraConfig.pipewire."92-custom-quantum" = {
+          "context.properties" = {
+            "default.clock.max-quantum" = 8192;
+            "default.clock.min-quantum" = 512;
+            "default.clock.quantum" = 512;
+            "default.clock.rate" = 48000;
+          };
         };
       };
       time.timeZone = "Europe/Amsterdam";
