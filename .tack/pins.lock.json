@@ -37,12 +37,10 @@
   "beer": {
     "type": "git",
     "url": "ssh://git@git.notashelf.dev:33/notashelf/beer.git",
-    "ref": "refs/tags/0.15.0",
-    "rev": "da1de905194539a2c679bb65a21784df1a68ed24",
-    "narHash": "sha256-0GvROA2J+p3X85H6apAwWxIjz4WJv3O4s/Hnmg+IomQ=",
-    "lastModified": 1795042287,
-    "tag": "0.15.0",
-    "version": "0.15.0"
+    "ref": "HEAD",
+    "rev": "6a14306d14e9de7d7c8cb4b9bbd2779dfc90ac24",
+    "narHash": "sha256-LFTyGENjehepEFIyhWxc5wY1Ntx+XSlHNzt1DU3sz8A=",
+    "lastModified": 1795080600
   },
   "bootvine": {
     "type": "git",
@@ -55,12 +53,10 @@
   "brewery": {
     "type": "git",
     "url": "ssh://git@git.notashelf.dev:33/notashelf/brewery.git",
-    "ref": "refs/tags/1.16.0",
-    "rev": "0aa0360ff6c5e5876dc08f3cfdd9523afa4215cc",
-    "narHash": "sha256-eBeQF4ZUm1vPIKT3Wy2XTtxwOoD6TBQmV9opDAqvQiY=",
-    "lastModified": 1794505805,
-    "tag": "1.16.0",
-    "version": "1.16.0"
+    "ref": "HEAD",
+    "rev": "28b714eb0dfe9496d8100290b8b19306e1e54999",
+    "narHash": "sha256-h7YFf5tMiYfVgkgrFMJJGadeet6SMYNeO2fqPXlRaGE=",
+    "lastModified": 1795005958
   },
   "cade": {
     "type": "github",

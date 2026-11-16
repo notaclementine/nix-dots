@@ -64,15 +64,10 @@ patches = [
 # manic systems + rafware <3
 [inputs.beer]
 url   = "git+ssh://git@git.notashelf.dev:33/notashelf/beer.git"
-tag   = "{version}"
 group = "mania"
-[inputs.bootvine]
-url = "git+https://codeberg.org/wvhulle/bootvine"
 [inputs.brewery]
-url            = "git+ssh://git@git.notashelf.dev:33/notashelf/brewery.git"
-tag            = "{version}"
-group          = "mania"
-exclude_follow = ["nixpkgs"]
+url   = "git+ssh://git@git.notashelf.dev:33/notashelf/brewery.git"
+group = "mania"
 [inputs.cade]
 url   = "github:manic-systems/cade"
 group = "mania"
@@ -113,6 +108,8 @@ type    = "fetch"
 # other stuff
 [inputs.apple-silicon]
 url = "github:nix-community/nixos-apple-silicon"
+[inputs.bootvine]
+url = "git+https://codeberg.org/wvhulle/bootvine"
 [inputs.darwin]
 url = "github:nix-darwin/nix-darwin/master"
 [inputs.disko]

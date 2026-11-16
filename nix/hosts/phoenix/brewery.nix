@@ -1,11 +1,8 @@
-{moduleWithSystem, ...}: {
-  flake.nixosModules.phoenix-brewery = moduleWithSystem ({inputs', ...}: {config, ...}: {
+{
+  flake.nixosModules.phoenix-brewery = {config, ...}: {
     services = {
       brewery = {
         enable = true;
-        package = inputs'.brewery.packages.default.overrideAttrs {
-          doCheck = false;
-        };
         sessionKeyFile = config.security.nix-secrets.secrets."other/brewery".path;
         ssh = {
           enable = true;
@@ -42,5 +39,5 @@
         mode = "0700";
       }
     ];
-  });
+  };
 }
