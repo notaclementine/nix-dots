@@ -1,5 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.nixosModules.phoenix-config = moduleWithSystem ({self', ...}: {
+  flake.nixosModules.daiya-config = moduleWithSystem ({self', ...}: {
     config,
     lib,
     ...
@@ -11,7 +11,7 @@
       efi.canTouchEfiVariables = lib.mkForce false;
       limine.efiInstallAsRemovable = true;
     };
-    networking.hostName = "phoenix";
+    networking.hostName = "daiya";
     nix.settings = {
       experimental-features = [
         "pipe-operators"

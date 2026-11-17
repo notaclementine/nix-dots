@@ -3,7 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosModules.phoenix-circus = {config, ...}: {
+  flake.nixosModules.daiya-circus = {config, ...}: {
     imports = [inputs.circus.nixosModules.default];
     services = {
       circus = {
@@ -113,21 +113,21 @@
       "other/circus/admin-password" = {
         group = "circus";
         owner = "circus";
-        recipients = ["phoenix" "yubikey"];
+        recipients = ["daiya" "yubikey"];
       };
       "other/circus/admin-key" = {
         group = "circus";
         owner = "circus";
-        recipients = ["phoenix" "yubikey"];
+        recipients = ["daiya" "yubikey"];
       };
       "other/circus/runner-key" = {
         group = "circus";
         owner = "circus";
-        recipients = ["phoenix" "yubikey"];
+        recipients = ["daiya" "yubikey"];
       };
       # this ⌄ is just so I can store it
       "other/circus/ca-key" = {
-        recipients = ["phoenix" "yubikey"];
+        recipients = ["daiya" "yubikey"];
       };
       "nix-cache-key" = {
         group = "circus";

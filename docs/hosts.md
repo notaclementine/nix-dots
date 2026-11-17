@@ -18,6 +18,13 @@ A family laptop configured for Aude and Kyla. Powered by an AMD processor and a
 Seagate drive, it relies on a BTRFS filesystem that rolls back the root
 subvolume to a blank snapshot on every boot, keeping the base system pristine.
 
+## daiya
+
+A headless aarch64 host running inside an Oracle vps, currently is the main
+circus builder/database since I haven't switched my homelab itself to nixos but
+will later be just a remote aarch64 builder. Only has clementine as a user and
+uses BTRFS impermanence like most hosts.
+
 ## eighty-six
 
 A minimal NixOS installer ISO (`x86_64-linux`) used for bootstrapping new
@@ -62,13 +69,6 @@ enabled. The system boots entirely into RAM with a `tmpfs` root, utilises a 2TB
 NVMe paired with a 2TB HDD, and is configured to dual-boot Windows 11 via
 Limine. It comes loaded with `steam`, `gamescope`, `davinci-resolve`, and full
 OBS Studio integrations.
-
-## phoenix
-
-A headless aarch64 host running inside an Oracle vps, currently is the main
-circus builder/database since I haven't switched my homelab itself to nixos but
-will later be just a remote aarch64 builder. Only has clementine as a user and
-uses BTRFS impermanence like most hosts.
 
 ## turtle
 

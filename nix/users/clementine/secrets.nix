@@ -7,7 +7,7 @@
           recipients = [
             "lenix"
             "onyx"
-            "phoenix"
+            "daiya"
             "yubikey"
           ];
         };
