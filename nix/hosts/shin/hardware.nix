@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.onyx-hardware = {
+  flake.nixosModules.shin-hardware = {
     lib,
     modulesPath,
     ...

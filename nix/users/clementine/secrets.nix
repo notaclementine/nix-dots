@@ -6,7 +6,7 @@
           neededForUsers = true;
           recipients = [
             "lena"
-            "onyx"
+            "shin"
             "daiya"
             "yubikey"
           ];
@@ -20,7 +20,7 @@
           owner = "clementine";
           recipients = [
             "lena"
-            "onyx"
+            "shin"
             "yubikey"
           ];
         };

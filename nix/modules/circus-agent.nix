@@ -11,7 +11,7 @@
       "other/circus/join-token" = {
         group = "circus-agent";
         owner = "circus-agent";
-        recipients = ["onyx" "yubikey"];
+        recipients = ["shin" "yubikey"];
       };
     };
     services.circus-agent = {

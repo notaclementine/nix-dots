@@ -126,7 +126,7 @@ e.g.:
 ```nix
 security.nix-secrets.secrets."clementine/linux" = {
   neededForUsers = true;
-  recipients = ["ACE" "cookie" "lena" "murtle" "onyx" "turtle" "yubikey"];
+  recipients = ["ACE" "cookie" "lena" "murtle" "shin" "turtle" "yubikey"];
 };
 ```
 

@@ -122,7 +122,7 @@
               "escapepod3"
               "lena"
               "murtle"
-              "onyx"
+              "shin"
               "daiya"
               "turtle"
               "yubikey"
@@ -133,7 +133,7 @@
             escapepod3 = "age1vfznp3e6xn0cr2mef2dpd2ml8egp3dx67t80ah4ggdmm5z33ncjqfu55r3";
             lena = "age1xpg656d826awgldew9svunr9r4r8rdmf8fz7zgjlgmpd809q5flsavsmkd";
             murtle = "age1eqm8wgfpc8aawaxardpypg5gcdluavplfy7gn2qp9tefwauezs2sd69wvl";
-            onyx = "age1vx67nthmpprcv7mws3rvp6wtqe23td8rkxvexhvay0gvsqse0saqquv2fe";
+            shin = "age1vx67nthmpprcv7mws3rvp6wtqe23td8rkxvexhvay0gvsqse0saqquv2fe";
             turtle = "age16wjhsc4uaf0jnucdx649v95ztjy8645smm33w7z47nlr8378r9tsmj5jnm";
             yubikey = "age10galsk69w2j2s45e00s2zla77ycrstgu9z7avhdrer2jzj3yj9xqp0np50";
           };

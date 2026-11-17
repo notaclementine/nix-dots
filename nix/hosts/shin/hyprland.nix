@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.hjemNixosModules.onyx-hyprland = {lib, ...}: {
+  flake.hjemNixosModules.shin-hyprland = {lib, ...}: {
     imports = with self.hjemNixosModules; [
       presets-hyprland
       hyprland

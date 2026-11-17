@@ -1,8 +1,8 @@
 {self, ...}: {
-  flake.nixosModules.onyx-hjem = {pkgs, ...}: {
+  flake.nixosModules.shin-hjem = {pkgs, ...}: {
     hjem.users.clementine = {
       imports = with self.hjemNixosModules; [
-        onyx-hyprland
+        shin-hyprland
       ];
       packages = with pkgs; [
         davinci-resolve

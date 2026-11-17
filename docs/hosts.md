@@ -61,7 +61,7 @@ An AMD desktop rig configured for Ewan. It features a dual-drive `f2fs` storage
 setup (an NVMe boot drive and a secondary Samsung 860 EVO for data) and drives a
 dual 1080p 60Hz monitor setup.
 
-## onyx
+## shin
 
 A high-end workstation and gaming desktop built for Clémentine. It features
 Nvidia graphics driving a 1440p 240Hz monitor with variable refresh rate
