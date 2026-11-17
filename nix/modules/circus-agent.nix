@@ -11,7 +11,11 @@
       "other/circus/join-token" = {
         group = "circus-agent";
         owner = "circus-agent";
-        recipients = ["shin" "yubikey"];
+        recipients = [
+          "daiya"
+          "shin"
+          "yubikey"
+        ];
       };
     };
     services.circus-agent = {
@@ -23,6 +27,10 @@
         supported_features = ["nixos-test" "big-parallel" "kvm"];
         cores = 0;
       };
+    };
+    users = {
+      users.circus-agent.uid = 997;
+      groups.circus-agent.gid = 997;
     };
     system.nixos-core.persistence.stores."/persistent".directories = [
       {

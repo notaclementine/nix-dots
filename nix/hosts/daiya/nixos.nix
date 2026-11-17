@@ -24,32 +24,20 @@
     programs.nh.flake = "/persistent/dotfiles";
     security.nix-secrets.identityPaths = ["/persistent/keys/age-identity.txt"];
     services = {
-      openssh.settings.PasswordAuthentication = false; # force login to only yubikey
-      caddy = {
-        enable = true;
-        globalConfig = ''
-          auto_https off
-          servers {
-            timeouts {
-              idle 1m
-            }
-          }
-        '';
+      circus-agent = {
+        settings.agent = {
+          name = "daiya";
+          systems = ["aarch64-linux"];
+          max_jobs = 4;
+          speed_factor = 4.0;
+        };
       };
+      openssh.settings.PasswordAuthentication = false; # force login to only yubikey
     };
-    system.nixos-core.persistence.stores."/persistent".directories = [
-      {
-        group = "caddy";
-        owner = "caddy";
-        target = "/var/lib/caddy";
-      }
-    ];
     time.timeZone = "Europe/London";
     users = {
       mutableUsers = false;
-      users = {
-        clementine.hashedPasswordFile = config.security.nix-secrets.secrets."clementine/linux".path;
-      };
+      users.clementine.hashedPasswordFile = config.security.nix-secrets.secrets."clementine/linux".path;
     };
   });
 }

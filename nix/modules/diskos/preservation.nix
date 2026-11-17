@@ -8,13 +8,6 @@
   in {
     boot.tmp.useTmpfs = false;
     fileSystems = {
-      "/var/lib/nixos" = {
-        depends = ["/persistent"];
-        device = "/persistent/var/lib/nixos";
-        fsType = "none";
-        neededForBoot = true;
-        options = ["bind"];
-      };
       "/var/log" = {
         depends = ["/persistent"];
         device = "/persistent/var/log";

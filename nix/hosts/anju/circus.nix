@@ -3,7 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosModules.daiya-circus = {config, ...}: {
+  flake.nixosModules.anju-circus = {config, ...}: {
     imports = [inputs.circus.nixosModules.default];
     services = {
       circus = {
@@ -43,26 +43,20 @@
             port = 3001;
             force_secure_cookies = true;
           };
-          queue_runner = {
-            build_timeout = 15000;
-            workers = 4;
-            local_systems = ["aarch64-linux"];
-            local_features = ["nixos-test" "big-parallel" "kvm"];
-            rpc = {
-              bind = "0.0.0.0:8443";
-              cache_substituter = "https://circus.ts.econnah.uk/nix-cache";
-              cache_public_key = "lecache:T6owlM58CGYc8X5xrAMq+IP6ilNWBpWlR8VazPPkjAQ=";
-              join_tokens = [
-                {
-                  name = "edgerunners";
-                  token_hash = "0dc1a2046a6a4366567708fa987d71bda8fd5162244b07845d6a1c81f5611d5a";
-                }
-              ];
-              tls = {
-                cert_file = "${self}/not-nix/other/circus/runner.crt";
-                key_file = config.security.nix-secrets.secrets."other/circus/runner-key".path;
-                require_client_cert = false;
-              };
+          queue_runner.rpc = {
+            bind = "0.0.0.0:8443";
+            cache_substituter = "https://circus.ts.econnah.uk/nix-cache";
+            cache_public_key = "lecache:T6owlM58CGYc8X5xrAMq+IP6ilNWBpWlR8VazPPkjAQ=";
+            join_tokens = [
+              {
+                name = "edgerunners";
+                token_hash = "0dc1a2046a6a4366567708fa987d71bda8fd5162244b07845d6a1c81f5611d5a";
+              }
+            ];
+            tls = {
+              cert_file = "${self}/not-nix/other/circus/runner.crt";
+              key_file = config.security.nix-secrets.secrets."other/circus/runner-key".path;
+              require_client_cert = false;
             };
           };
           evaluator = {
@@ -95,7 +89,10 @@
         }
       '';
     };
-
+    users = {
+      users.circus.uid = 998;
+      groups.circus.gid = 998;
+    };
     system.nixos-core.persistence.stores."/persistent".directories = [
       {
         group = "circus";
@@ -113,21 +110,21 @@
       "other/circus/admin-password" = {
         group = "circus";
         owner = "circus";
-        recipients = ["daiya" "yubikey"];
+        recipients = ["anju" "yubikey"];
       };
       "other/circus/admin-key" = {
         group = "circus";
         owner = "circus";
-        recipients = ["daiya" "yubikey"];
+        recipients = ["anju" "yubikey"];
       };
       "other/circus/runner-key" = {
         group = "circus";
         owner = "circus";
-        recipients = ["daiya" "yubikey"];
+        recipients = ["anju" "yubikey"];
       };
       # this ⌄ is just so I can store it
       "other/circus/ca-key" = {
-        recipients = ["daiya" "yubikey"];
+        recipients = ["anju" "yubikey"];
       };
       "nix-cache-key" = {
         group = "circus";

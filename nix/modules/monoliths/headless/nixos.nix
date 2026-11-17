@@ -130,6 +130,7 @@
               "yubikey"
             ];
             ACE = "age1qa58lk685uwd9s8g3evvh9kyaf48rj0pggnsx6gc8nza4redx52qgrqyc0";
+            anju = "changeMe";
             cookie = "age17tdwsudlll0ykq4xlhpm758nlawnzt43kcefp6af3vkaczperahsqslydt";
             daiya = "age1nur5twlqsdmlqtjwa2809rpj4wtj9hufayuahy4a8r6ayxfk435q25ufcj";
             escapepod3 = "age1vfznp3e6xn0cr2mef2dpd2ml8egp3dx67t80ah4ggdmm5z33ncjqfu55r3";

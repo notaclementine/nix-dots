@@ -1,5 +1,6 @@
-{
-  flake.nixosModules.daiya-brewery = {config, ...}: {
+{inputs, ...}: {
+  flake.nixosModules.anju-brewery = {config, ...}: {
+    imports = [inputs.brewery.nixosModules.default];
     services = {
       brewery = {
         enable = true;
@@ -16,10 +17,14 @@
       '';
     };
     systemd.services.brewery.environment.BREWERY_PUBLIC_URL = "https://git.ts.econnah.uk";
+    users = {
+      users.git.uid = 999;
+      groups.git.gid = 999;
+    };
     security = {
       nix-secrets.secrets."other/brewery" = {
         recipients = [
-          "daiya"
+          "anju"
           "yubikey"
         ];
         owner = "git";

@@ -5,10 +5,8 @@
 }: {
   flake.nixosConfigurations.daiya = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
-      inputs.brewery.nixosModules.default
+      circus-agent
       clementine-headless
-      daiya-brewery
-      daiya-circus
       daiya-config
       daiya-hardware
       headless

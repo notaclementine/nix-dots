@@ -36,7 +36,6 @@
               postMountHook = ''
                 mkdir -p /mnt/nix
                 mkdir -p /mnt/persistent/nix
-                mkdir -p /mnt/persistent/var/lib/nixos
                 mkdir -p /mnt/persistent/var/log
                 mount --bind /mnt/persistent/nix /mnt/nix
               '';
