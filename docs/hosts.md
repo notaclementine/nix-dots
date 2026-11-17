@@ -39,7 +39,7 @@ Unlike the other hosts, it uses a traditional BTRFS partition layout without the
 `preservation` module or `nix-secrets`, running the Asahi Linux kernel and
 firmware.
 
-## evilix
+## kiriya
 
 A wsl host for Clémentine. Runs without `preservation` module. To use via
 windows terminal utilise this command:

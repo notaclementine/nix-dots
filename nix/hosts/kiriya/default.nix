@@ -3,13 +3,13 @@
   self,
   ...
 }: {
-  flake.nixosConfigurations.evilix = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.kiriya = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       inputs.wsl.nixosModules.default
       clementine-headless
-      evilix-config
-      evilix-hjem
       headless
+      kiriya-config
+      kiriya-hjem
       lix
       mesa
     ];

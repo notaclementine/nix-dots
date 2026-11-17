@@ -1,5 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.nixosModules.evilix-config = moduleWithSystem (
+  flake.nixosModules.kiriya-config = moduleWithSystem (
     {self', ...}: {
       pkgs,
       lib,
@@ -23,7 +23,7 @@
         ];
       };
       networking = {
-        hostName = "evilix";
+        hostName = "kiriya";
         firewall.trustedInterfaces = ["loopback0"];
       };
       systemd.user.targets = {
