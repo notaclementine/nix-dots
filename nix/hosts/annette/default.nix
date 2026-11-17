@@ -3,9 +3,9 @@
   self,
   ...
 }: {
-  flake.darwinConfigurations.anapple = inputs.darwin.lib.darwinSystem {
+  flake.darwinConfigurations.annette = inputs.darwin.lib.darwinSystem {
     modules = with self.darwinModules; [
-      anapple-config
+      annette-config
       clementine-graphical
       graphical
       lix
