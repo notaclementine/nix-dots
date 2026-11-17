@@ -120,7 +120,7 @@
               "ACE"
               "cookie"
               "escapepod3"
-              "lenix"
+              "lena"
               "murtle"
               "onyx"
               "daiya"
@@ -131,7 +131,7 @@
             cookie = "age17tdwsudlll0ykq4xlhpm758nlawnzt43kcefp6af3vkaczperahsqslydt";
             daiya = "age1nur5twlqsdmlqtjwa2809rpj4wtj9hufayuahy4a8r6ayxfk435q25ufcj";
             escapepod3 = "age1vfznp3e6xn0cr2mef2dpd2ml8egp3dx67t80ah4ggdmm5z33ncjqfu55r3";
-            lenix = "age1xpg656d826awgldew9svunr9r4r8rdmf8fz7zgjlgmpd809q5flsavsmkd";
+            lena = "age1xpg656d826awgldew9svunr9r4r8rdmf8fz7zgjlgmpd809q5flsavsmkd";
             murtle = "age1eqm8wgfpc8aawaxardpypg5gcdluavplfy7gn2qp9tefwauezs2sd69wvl";
             onyx = "age1vx67nthmpprcv7mws3rvp6wtqe23td8rkxvexhvay0gvsqse0saqquv2fe";
             turtle = "age16wjhsc4uaf0jnucdx649v95ztjy8645smm33w7z47nlr8378r9tsmj5jnm";

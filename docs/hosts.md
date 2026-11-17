@@ -48,7 +48,7 @@ windows terminal utilise this command:
 C:\WINDOWS\system32\wsl.exe -d NixOS -u root -e /run/current-system/sw/bin/machinectl shell -E DISPLAY=:0 -E WAYLAND_DISPLAY=wayland-0 -E XDG_RUNTIME_DIR=/run/user/2026 clementine@.host /etc/wsl-session-init.sh
 ```
 
-## lenix
+## lena
 
 Clémentine's primary Apple Silicon laptop. It features LUKS full-disk encryption
 (`cryptlenix`) and an ephemeral BTRFS root that wipes on boot. It includes

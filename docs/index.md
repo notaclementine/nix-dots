@@ -126,7 +126,7 @@ e.g.:
 ```nix
 security.nix-secrets.secrets."clementine/linux" = {
   neededForUsers = true;
-  recipients = ["ACE" "cookie" "lenix" "murtle" "onyx" "turtle" "yubikey"];
+  recipients = ["ACE" "cookie" "lena" "murtle" "onyx" "turtle" "yubikey"];
 };
 ```
 
@@ -147,7 +147,7 @@ for hosts that actually have that user import the relevant one — e.g.
 which in turn is only imported by hosts with a clementine account.
 
 `clementine-eduroam` is a good example of splitting even further: it holds a
-single secret (`clementine/wifi/eduroam`) scoped to lenix and yubikey only,
+single secret (`clementine/wifi/eduroam`) scoped to lena and yubikey only,
 because no other host needs eduroam credentials.
 
 ### secret-assertions

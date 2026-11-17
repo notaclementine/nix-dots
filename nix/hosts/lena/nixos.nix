@@ -1,5 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.nixosModules.lenix-config = moduleWithSystem (
+  flake.nixosModules.lena-config = moduleWithSystem (
     {self', ...}: {
       config,
       pkgs,
@@ -29,7 +29,7 @@
         };
         sensor.iio.enable = true;
       };
-      networking.hostName = "lenix";
+      networking.hostName = "lena";
       nix.settings = {
         cores = 4;
         http-connections = 30;
