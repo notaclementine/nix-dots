@@ -1,0 +1,36 @@
+From d63c12b1689bbf45062042fd008b296f8aad29e1 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Cl=C3=A9mentine?= <git@econnah.uk>
+Date: Wed, 18 Nov 2026 11:26:11 +0100
+Subject: [PATCH] lazyspotify: remove customKeyring override
+
+---
+ pkgs/by-name/la/lazyspotify/package.nix | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/pkgs/by-name/la/lazyspotify/package.nix b/pkgs/by-name/la/lazyspotify/package.nix
+index d54858dc84f395..60f59f6351ce5b 100644
+--- a/pkgs/by-name/la/lazyspotify/package.nix
++++ b/pkgs/by-name/la/lazyspotify/package.nix
+@@ -4,7 +4,6 @@
+   fetchFromGitHub,
+   lib,
+   versionCheckHook,
+-  customKeyring ? null,
+ }:
+ buildGoModule (finalAttrs: {
+   pname = "lazyspotify";
+@@ -23,14 +22,6 @@ buildGoModule (finalAttrs: {
+ 
+   subPackages = [ "cmd/lazyspotify" ];
+ 
+-  # lets me use oo7 with /org/freedesktop/secrets/collection/Login
+-  # unsure why its needed tbh but fails without
+-  preBuild = lib.optionalString (customKeyring != null) ''
+-    chmod -R u+w vendor/github.com/zalando/go-keyring
+-    substituteInPlace vendor/github.com/zalando/go-keyring/secret_service/secret_service.go \
+-      --replace-fail '/org/freedesktop/secrets/aliases/default' '${customKeyring}'
+-  '';
+-
+   ldflags = [
+     "-s"
+     "-w"

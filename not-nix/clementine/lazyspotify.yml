@@ -1,0 +1,7 @@
+auth:
+  client_id: a05e9b38cd3e420a87ca1d09b26b7179
+  token-store:
+    backend: command
+    command:
+      get: [oo7-cli, lookup, --secret-only, service=lazyspotify, key=token-v2]
+      set: [oo7-cli, store, "LazySpotify Token", service=lazyspotify, key=token-v2]

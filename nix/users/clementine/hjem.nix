@@ -136,7 +136,7 @@
           hjemNixosModules.vicinae
         ];
         packages = with pkgs; [
-          (lazyspotify.override {withOo7 = true;})
+          lazyspotify
           libreoffice
           osu-lazer
         ];
@@ -166,10 +166,7 @@
               };
             };
           };
-          "lazyspotify/config.yml".text = ''
-            auth:
-              client_id: a05e9b38cd3e420a87ca1d09b26b7179
-          '';
+          "lazyspotify/config.yml".source = "${self}/not-nix/clementine/lazyspotify.yml";
           "vesktop/settings/settings.json".source = "${self}/not-nix/clementine/vesktop/settings.json";
         };
       };

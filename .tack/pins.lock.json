@@ -189,23 +189,30 @@
     "narHash": "sha256-bTKSclXJAmo9qdxPedTBHUGr8awPr4BrbOoOutJsYIc=",
     "lastModified": 1794537146,
     "patched": {
-      "path": "/nix/store/0mfj8i764fm62x6gml6mq2c3dj0k1dk2-source",
-      "narHash": "sha256-/9XOPG1qR/hrsnTHS/nw2JBuFIR7tskl1iCpViz+Vds=",
+      "path": "/nix/store/dxpfwx99g6r1xk0xii4cx77vkrksf95x-source",
+      "narHash": "sha256-P0nkcd+edUuIjBAB96Z3bd5v5fQhmgwHxS+tbYqx1L0=",
       "lastModified": 1794537146,
       "patches": [
-        {
-          "source": "patches/nixpkgs/temp.patch",
-          "file": "patches/nixpkgs/temp.patch",
-          "sha256": "b1bd867a60546cef8d55291411ad14bfc08dcecc22e563be1b122607b5089481"
-        },
         {
           "source": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/583684.patch",
           "url": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/583684.patch",
           "file": "patches/nixpkgs/583684.patch",
           "sha256": "b4b80a9774743e549b0adbe689126135dbbf47da2c5b76c7f910fb67c4fb1bf7"
+        },
+        {
+          "source": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/589606.patch",
+          "url": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/589606.patch",
+          "file": "patches/nixpkgs/589606.patch",
+          "sha256": "f6a6e2e6bf3245c178b2b22a606a9f5f2ec3e284f12c6db0756da340b8e17266"
+        },
+        {
+          "source": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/589878.patch",
+          "url": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/589878.patch",
+          "file": "patches/nixpkgs/589878.patch",
+          "sha256": "d680a338ace08b2243eca8becf9f091092b87a13777577a3e5990941445caf2a"
         }
       ],
-      "diff": "52bb0c00f202210a42cd2894a4bbc4680d0c73a9387c2d5c39144e7772f061af"
+      "diff": "649e280c07dab7e3d1a34c348e557c32745e54c3c4b4a680c2ae195e0360b521"
     }
   },
   "nvf": {
