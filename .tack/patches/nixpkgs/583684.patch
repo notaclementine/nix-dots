@@ -1,7 +1,7 @@
 From 1fc17581c358927eae6449a131ad6191b7e30233 Mon Sep 17 00:00:00 2001
 From: Kiskae <Kiskae@users.noreply.github.com>
 Date: Thu, 5 Nov 2026 17:48:27 +0100
-Subject: [PATCH] linuxPackages.nvidiaPackages.production: 595.112.07 ->
+Subject: [PATCH 1/2] linuxPackages.nvidiaPackages.production: 595.112.07 ->
  620.70.06
 
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH] linuxPackages.nvidiaPackages.production: 595.112.07 ->
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/pkgs/os-specific/linux/nvidia-x11/default.nix b/pkgs/os-specific/linux/nvidia-x11/default.nix
-index 08d61bd77cb61..f101a9ee5c9bc 100644
+index 08d61bd77cb616..f101a9ee5c9bc1 100644
 --- a/pkgs/os-specific/linux/nvidia-x11/default.nix
 +++ b/pkgs/os-specific/linux/nvidia-x11/default.nix
 @@ -39,12 +39,12 @@ rec {
@@ -28,6 +28,40 @@ index 08d61bd77cb61..f101a9ee5c9bc 100644
 +    openSha256 = "sha256-dV8vzniUl3UJoG2Q3KdoUJigLRuQeTniUfB670gb1Mw=";
 +    settingsSha256 = "sha256-CFBRmXFJ9eAf5BRlHMBolahz1Pshr9giI7zcZC29oZ8=";
 +    persistencedSha256 = "sha256-FpGzhArrvR1nEt8lKDzNEnbvHvGP36gL1dINvpDAkpA=";
+   };
+ 
+   new_feature = generic {
+
+From b723e5d671e99c27ec7d980c3e1766256d7c0f42 Mon Sep 17 00:00:00 2001
+From: Kiskae <Kiskae@users.noreply.github.com>
+Date: Wed, 18 Nov 2026 19:23:47 +0100
+Subject: [PATCH 2/2] linuxPackages.nvidiaPackages.production: 620.70.06 ->
+ 620.73.04
+
+---
+ pkgs/os-specific/linux/nvidia-x11/default.nix | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/pkgs/os-specific/linux/nvidia-x11/default.nix b/pkgs/os-specific/linux/nvidia-x11/default.nix
+index f101a9ee5c9bc1..d26d0a9b27eb5e 100644
+--- a/pkgs/os-specific/linux/nvidia-x11/default.nix
++++ b/pkgs/os-specific/linux/nvidia-x11/default.nix
+@@ -39,12 +39,12 @@ rec {
+   bleeding_edge = selectHighestVersion latest beta;
+ 
+   production = generic {
+-    version = "620.70.06";
+-    sha256_64bit = "sha256-KRGOOr0IwHVZvMo9nHYjjQOUkK8DYqLlvPy+cgSv1LE=";
+-    sha256_aarch64 = "sha256-P6ZaknHg3eKk5YxJZcOIhaAqOkKszcsm/IF0EGB/PgM=";
+-    openSha256 = "sha256-dV8vzniUl3UJoG2Q3KdoUJigLRuQeTniUfB670gb1Mw=";
+-    settingsSha256 = "sha256-CFBRmXFJ9eAf5BRlHMBolahz1Pshr9giI7zcZC29oZ8=";
+-    persistencedSha256 = "sha256-FpGzhArrvR1nEt8lKDzNEnbvHvGP36gL1dINvpDAkpA=";
++    version = "620.73.04";
++    sha256_64bit = "sha256-tfLi1dqENbMlOTBAFbib9+si/grsjNaQW3puip+bjxs=";
++    sha256_aarch64 = "sha256-45QZFS3Hs9hN4tKRrfmripADVpZQqksB7pAEZaS+XkA=";
++    openSha256 = "sha256-+GPU2bXC/QWZTt0eH3dTvI0bMAta1GCdU2WFI4E4LWE=";
++    settingsSha256 = "sha256-Wrv0F7Eo9X/0Xv5DclI9aIe3FcRtbu9okQJuWBjL8es=";
++    persistencedSha256 = "sha256-QOndl1q7veD5aB6AfEe0/K2QHR8+ftLsei/aQrUCN3Q=";
    };
  
    new_feature = generic {
