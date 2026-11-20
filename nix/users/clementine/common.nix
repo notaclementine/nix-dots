@@ -1,10 +1,11 @@
-{
+{moduleWithSystem, ...}: {
   flake.commonModules = {
-    clementine-graphical = {pkgs, ...}: {
-      environment.systemPackages = with pkgs; [
-        yubikey-manager
+    clementine-graphical = moduleWithSystem ({inputs', ...}: {pkgs, ...}: {
+      environment.systemPackages = [
+        inputs'.sable.packages.sable-desktop
+        pkgs.yubikey-manager
       ];
-    };
+    });
     clementine-headless = {pkgs, ...}: {
       hjem.users.clementine = {
         enable = true;

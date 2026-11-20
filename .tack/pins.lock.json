@@ -21,6 +21,7 @@
     "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
     "nvf": "github:notashelf/nvf",
     "rom": "github:manic-systems/rom",
+    "sable": "git+https://git.sable.moe/SableClient/sable-next",
     "super-secret": "github:notaclementine/secrets",
     "tack": "github:manic-systems/tack",
     "vicinae": "github:vicinaehq/vicinae",
@@ -246,6 +247,14 @@
     "rev": "f09f64851bd91352557612eb2381e4aed520f26a",
     "narHash": "sha256-Vl33nZm1y3Lpq3wY84TLgcDKbv9nkvI3hhcdPrzvLZ8=",
     "lastModified": 1794243171
+  },
+  "sable": {
+    "type": "git",
+    "url": "https://git.sable.moe/SableClient/sable-next",
+    "ref": "HEAD",
+    "rev": "a7597b8d5b3cea3dc4f22d6d312dfab8443287d8",
+    "narHash": "sha256-wB47Hsv1HDkAiDrkWREtuncLqrQIP6zdhi7sAlHA6Nc=",
+    "lastModified": 1795195734
   },
   "super-secret": {
     "type": "github",

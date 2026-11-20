@@ -125,6 +125,8 @@ url         = "git+https://git.lix.systems/lix-project/lix"
 omit_inputs = ["nixpkgs-regression", "nix_2_18", "nix2container"]
 [inputs.nix-secrets]
 url = "github:unnamed-systems/nix-secrets"
+[inputs.sable]
+url = "git+https://git.sable.moe/SableClient/sable-next"
 [inputs.vicinae]
 url = "github:vicinaehq/vicinae"
 [inputs.wsl]
