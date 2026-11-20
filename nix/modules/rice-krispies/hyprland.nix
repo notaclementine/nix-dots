@@ -27,6 +27,7 @@
 
             hl.env("QT_QPA_PLATFORM", "wayland;xcb")
             hl.on("hyprland.start", function()
+                hl.exec_cmd("uwsm finalize WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE")
                 hl.exec_cmd("uwsm app -- kitty --start-as=hidden -1")
             end)
           '';
