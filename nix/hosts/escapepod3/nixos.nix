@@ -26,12 +26,6 @@
       "/var/cache".options = ["noatime"];
       "/var/log".options = ["compress=zstd"];
     };
-    hardware.asahi.peripheralFirmwareDirectory = pkgs.requireFile {
-      hash = "sha256-X+HF1Ste4dAthjcjE/RtC5sOPGgLh10nZvvQVXvvr6k=";
-      hashMode = "recursive";
-      message = "Please run 'nix-store --add-fixed sha256 --recursive /boot/vendorfw' to add the firmware.";
-      name = "vendorfw";
-    };
     hardware.sensor.iio.enable = true;
     networking.hostName = "escapepod3";
     nix.settings = {

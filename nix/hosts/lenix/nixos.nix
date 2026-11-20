@@ -20,15 +20,7 @@
         ];
       };
       environment.systemPackages = [self'.packages.nvim-qwerty];
-      hardware = {
-        asahi.peripheralFirmwareDirectory = pkgs.requireFile {
-          hash = "sha256-ich1SH/YkuDja91ln/PcD0/Oe6Zb5uxGhWIBCeYaHvc=";
-          hashMode = "recursive";
-          message = "Please run 'nix-store --add-fixed sha256 --recursive /boot/vendorfw' to add the firmware.";
-          name = "vendorfw";
-        };
-        sensor.iio.enable = true;
-      };
+      hardware.sensor.iio.enable = true;
       networking.hostName = "lenix";
       nix.settings = {
         cores = 4;
