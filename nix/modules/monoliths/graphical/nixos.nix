@@ -1,15 +1,14 @@
 {
-  inputs,
   self,
+  moduleWithSystem,
   ...
 }: {
-  flake.nixosModules.graphical = {
+  flake.nixosModules.graphical = moduleWithSystem ({inputs', ...}: {
     lib,
     pkgs,
     ...
   }: {
     imports = [
-      inputs.bootvine.nixosModules.default
       self.commonModules.graphical
       self.nixosModules.headless
     ];
@@ -72,7 +71,10 @@
       soteria.enable = true;
     };
     services = {
-      bootvine.enable = true;
+      bootvine = {
+        enable = true;
+        package = inputs'.bootvine.packages.bootvine;
+      };
       flatpak.enable = lib.mkDefault true;
       greetd = {
         enable = true;
@@ -123,5 +125,5 @@
         ];
       };
     };
-  };
+  });
 }
