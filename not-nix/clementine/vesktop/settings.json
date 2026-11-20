@@ -203,7 +203,7 @@
     },
     "FixSpotifyEmbeds": {
       "enabled": true,
-      "volume": 30.0
+      "volume": 30
     },
     "FixYoutubeEmbeds": {
       "enabled": true
@@ -477,13 +477,17 @@
       "defaultAllowedUsersAndRolesDropdownState": true
     },
     "ShowHiddenThings": {
-      "enabled": false
+      "enabled": true,
+      "showTimeouts": true,
+      "showInvitesPaused": true,
+      "showModView": true
     },
     "ShowMeYourName": {
       "enabled": false
     },
     "ShowTimeoutDuration": {
-      "enabled": false
+      "enabled": true,
+      "displayStyle": "ssalggnikool"
     },
     "SilentMessageToggle": {
       "enabled": false
@@ -537,10 +541,13 @@
       "enabled": false
     },
     "TypingTweaks": {
-      "enabled": false
+      "enabled": true,
+      "showAvatars": true,
+      "showRoleColors": true,
+      "alternativeFormatting": true
     },
     "Unindent": {
-      "enabled": false
+      "enabled": true
     },
     "UnlockedAvatarZoom": {
       "enabled": false,
@@ -564,7 +571,7 @@
       "enabled": false
     },
     "ValidUser": {
-      "enabled": false
+      "enabled": true
     },
     "VoiceChatDoubleClick": {
       "enabled": false
@@ -596,7 +603,8 @@
       "overrideCommonKeybinds": true
     },
     "WebScreenShareFixes": {
-      "enabled": true
+      "enabled": true,
+      "betterCodecs": true
     },
     "WhoReacted": {
       "enabled": true,
@@ -616,7 +624,8 @@
     },
     "NoTrack": {
       "enabled": true,
-      "disableAnalytics": true
+      "disableAnalytics": true,
+      "allowBadgeTracking": true
     },
     "Settings": {
       "enabled": true,
@@ -665,6 +674,9 @@
     },
     "FixDiscordCss": {
       "enabled": true
+    },
+    "BetterSearch": {
+      "enabled": true
     }
   },
   "uiElements": {
@@ -681,7 +693,7 @@
     "authenticated": false,
     "url": "https://api.vencord.dev/",
     "settingsSync": false,
-    "settingsSyncVersion": 1793904121594
+    "settingsSyncVersion": 1795204117489
   },
   "nativeTitleBar": false
 }
