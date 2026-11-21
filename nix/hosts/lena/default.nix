@@ -3,14 +3,14 @@
   self,
   ...
 }: {
-  flake.nixosConfigurations.lenix = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.lena = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       asahi
       clementine-graphical
       hyprland
-      lenix-config
-      lenix-hardware
-      lenix-hjem
+      lena-config
+      lena-hardware
+      lena-hjem
       limine
       lix
       preservation

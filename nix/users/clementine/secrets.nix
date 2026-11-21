@@ -5,9 +5,9 @@
         "clementine/linux" = {
           neededForUsers = true;
           recipients = [
-            "lenix"
-            "onyx"
-            "phoenix"
+            "daiya"
+            "lena"
+            "shin"
             "yubikey"
           ];
         };
@@ -19,15 +19,15 @@
           group = "clementine";
           owner = "clementine";
           recipients = [
-            "lenix"
-            "onyx"
+            "lena"
+            "shin"
             "yubikey"
           ];
         };
       };
     };
     clementine-eduroam = {
-      security.nix-secrets.secrets."clementine/wifi/eduroam".recipients = ["lenix" "yubikey"];
+      security.nix-secrets.secrets."clementine/wifi/eduroam".recipients = ["lena" "yubikey"];
     };
   };
 }

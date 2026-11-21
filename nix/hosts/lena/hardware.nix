@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lenix-hardware = {
+  flake.nixosModules.lena-hardware = {
     lib,
     pkgs,
     modulesPath,

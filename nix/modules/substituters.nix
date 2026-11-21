@@ -67,7 +67,7 @@
               public_key = "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=";
             }
           ]
-          ++ lib.optional (config.networking.hostName != "phoenix") {
+          ++ lib.optional (config.networking.hostName != "daiya") {
             url = "https://circus.ts.econnah.uk/nix-cache";
             priority = 50;
             public_key = "lecache:T6owlM58CGYc8X5xrAMq+IP6ilNWBpWlR8VazPPkjAQ=";

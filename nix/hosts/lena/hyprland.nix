@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.hjemNixosModules.lenix-hyprland = {lib, ...}: {
+  flake.hjemNixosModules.lena-hyprland = {lib, ...}: {
     imports = with self.hjemNixosModules; [
       hyprland
       presets-hyprland

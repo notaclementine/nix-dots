@@ -3,7 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosConfigurations.onyx = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.shin = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       circus-agent
       clementine-graphical
@@ -12,11 +12,11 @@
       limine
       lix
       nvidia
-      onyx-config
-      onyx-disko
-      onyx-hardware
-      onyx-hjem
       preservation
+      shin-config
+      shin-disko
+      shin-hardware
+      shin-hjem
     ];
   };
 }

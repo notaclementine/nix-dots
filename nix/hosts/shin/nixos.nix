@@ -1,5 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.nixosModules.onyx-config = moduleWithSystem (
+  flake.nixosModules.shin-config = moduleWithSystem (
     {self', ...}: {
       config,
       pkgs,
@@ -32,7 +32,7 @@
         pkgs.efibootmgr
         self'.packages.nvim-qwerty
       ];
-      networking.hostName = "onyx";
+      networking.hostName = "shin";
       nix.settings = {
         cores = 0;
         http-connections = 100;
@@ -56,7 +56,7 @@
       services = {
         circus-agent = {
           settings.agent = {
-            name = "onyx";
+            name = "shin";
             systems = ["x86_64-linux"];
             max_jobs = 4;
             speed_factor = 4.0;

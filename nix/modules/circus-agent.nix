@@ -11,14 +11,14 @@
       "other/circus/join-token" = {
         group = "circus-agent";
         owner = "circus-agent";
-        recipients = ["onyx" "yubikey"];
+        recipients = ["shin" "yubikey"];
       };
     };
     services.circus-agent = {
       enable = true;
       joinTokenFile = config.security.nix-secrets.secrets."other/circus/join-token".path;
       settings.agent = {
-        runner_url = "circus+tls://phoenix.wild-beaufort.ts.net:8443";
+        runner_url = "circus+tls://daiya.wild-beaufort.ts.net:8443";
         tls.ca_file = "${self}/not-nix/other/circus/ca.crt";
         supported_features = ["nixos-test" "big-parallel" "kvm"];
         cores = 0;

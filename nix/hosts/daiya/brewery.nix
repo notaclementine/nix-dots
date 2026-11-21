@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.phoenix-brewery = {config, ...}: {
+  flake.nixosModules.daiya-brewery = {config, ...}: {
     services = {
       brewery = {
         enable = true;
@@ -19,7 +19,7 @@
     security = {
       nix-secrets.secrets."other/brewery" = {
         recipients = [
-          "phoenix"
+          "daiya"
           "yubikey"
         ];
         owner = "git";

@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.nixosModules.phoenix-hardware = {
+  flake.nixosModules.daiya-hardware = {
     lib,
     modulesPath,
     ...

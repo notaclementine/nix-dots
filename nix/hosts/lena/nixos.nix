@@ -1,5 +1,5 @@
 {moduleWithSystem, ...}: {
-  flake.nixosModules.lenix-config = moduleWithSystem (
+  flake.nixosModules.lena-config = moduleWithSystem (
     {self', ...}: {
       config,
       pkgs,
@@ -21,7 +21,7 @@
       };
       environment.systemPackages = [self'.packages.nvim-qwerty];
       hardware.sensor.iio.enable = true;
-      networking.hostName = "lenix";
+      networking.hostName = "lena";
       nix.settings = {
         cores = 4;
         http-connections = 30;

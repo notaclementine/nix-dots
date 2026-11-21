@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.nixosModules.evilix-hjem = {lib, ...}: {
+  flake.nixosModules.kiriya-hjem = {lib, ...}: {
     hjem.users.clementine = {
       imports = with self.hjemNixosModules; [
         oledppuccin
