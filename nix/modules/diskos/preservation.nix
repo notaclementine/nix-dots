@@ -56,6 +56,7 @@
               ".local/share/modprobed-db"
               ".local/share/nvim"
               ".local/share/zoxide"
+              ".local/state/rom"
               ".local/state/wireplumber"
               ".ssh"
               ".steam"
