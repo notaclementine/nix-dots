@@ -98,6 +98,9 @@ group = "mania"
 [inputs.tack]
 url   = "github:manic-systems/tack"
 group = "mania"
+[inputs.nixdg-ninja]
+url   = "github:NotAShelf/nixdg-ninja"
+group = "mania"
 
 # my stuff
 [inputs.super-secret]

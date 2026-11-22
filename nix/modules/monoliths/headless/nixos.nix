@@ -16,6 +16,7 @@
         inputs.cade.nixosModules.default
         inputs.hjem.nixosModules.default
         inputs.nix-secrets.nixosModules.default
+        inputs.nixdg-ninja.nixosModules.nixdg-ninja
         inputs.nixos-core.nixosModules.default
         inputs.tack.nixosModules.default
         self.commonModules.headless
@@ -109,6 +110,7 @@
           enableFishIntegration = true;
         };
         nano.enable = lib.mkForce false;
+        nixdg-ninja.enable = true;
       };
       security = {
         loginDefs.settings.UMASK = "002";

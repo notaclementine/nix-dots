@@ -17,6 +17,7 @@
     "ncro": "github:manic-systems/ncro",
     "nh": "github:nix-community/nh",
     "nix-secrets": "github:unnamed-systems/nix-secrets",
+    "nixdg-ninja": "github:NotAShelf/nixdg-ninja",
     "nixos-core": "github:manic-systems/nixos-core",
     "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
     "nvf": "github:notashelf/nvf",
@@ -190,6 +191,15 @@
     "rev": "6cd0e31794dce50f3f84f197558d0cd067f59a6f",
     "narHash": "sha256-yKt1FQlLIG+pH+EJ3ARKon4sR0XkVaTpyxRv2Iy2Erk=",
     "lastModified": 1795437558,
+    "public": true
+  },
+  "nixdg-ninja": {
+    "type": "github",
+    "owner": "NotAShelf",
+    "repo": "nixdg-ninja",
+    "rev": "6d296209d0dd406469102b977e3fa870da37bf4d",
+    "narHash": "sha256-M4dKtH7Uwfd73TNvwVcgT3nfvCGhSWOqnmFbhIg97AE=",
+    "lastModified": 1788885252,
     "public": true
   },
   "nixos-core": {
