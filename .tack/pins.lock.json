@@ -31,9 +31,9 @@
     "type": "github",
     "owner": "nix-community",
     "repo": "nixos-apple-silicon",
-    "rev": "41bdf43ee2987611d956ca6fad6d684798ea5487",
-    "narHash": "sha256-KYFg4islF6aMUUTmLBka+/8df6hFoPyBdOGB8afZoro=",
-    "lastModified": 1794976853,
+    "rev": "22142b67aff1bf0ada5c384974f05524f3980b14",
+    "narHash": "sha256-boPmaYTtheIPdmcRIzPCkvdo7OzBdFMPR7RMGVj3us4=",
+    "lastModified": 1795385658,
     "public": true
   },
   "beer": {
@@ -56,9 +56,9 @@
     "type": "git",
     "url": "ssh://git@git.notashelf.dev:33/notashelf/brewery.git",
     "ref": "HEAD",
-    "rev": "3f7a7d9c1a7cd28052b98ca0afd2e019d00f3673",
-    "narHash": "sha256-pNYxt/0tTWMiKc3n3kownS8OBGvhiGEgkdfCChFlnHw=",
-    "lastModified": 1795186419
+    "rev": "7b4d5a82bac15e535280ed5b4a0496489b8c7240",
+    "narHash": "sha256-NYG+vEZtLQuXfnKY+S4lvcJGLzgI/v4qw4FW5oOEMkw=",
+    "lastModified": 1795341370
   },
   "cade": {
     "type": "github",
@@ -90,9 +90,9 @@
     "type": "github",
     "owner": "nix-darwin",
     "repo": "nix-darwin",
-    "rev": "ff0e21a414d4547183396da1b44a66f2577b65e9",
-    "narHash": "sha256-+RpTlcdh9KqZ+ZiLkNSTvibQWm935EcIdBzRPCTFsrQ=",
-    "lastModified": 1793418699,
+    "rev": "663d8b962a11cda261b6e9f14e03911fac94baf0",
+    "narHash": "sha256-Gd1+Oaj8nS+p1qLpKk4MGv/qGh62+lTkX4262e2UDgc=",
+    "lastModified": 1795373241,
     "public": true
   },
   "disko": {
@@ -161,17 +161,17 @@
     "type": "git",
     "url": "https://git.lix.systems/lix-project/lix",
     "ref": "HEAD",
-    "rev": "3d326c50ff673c24e4ef85353bbd53afdaff67fd",
-    "narHash": "sha256-8OjTAfBDfdU9iYv+I6goBjN7vtjOTZng93aKMdOEvAY=",
-    "lastModified": 1795279129
+    "rev": "feedf4a098afbbc1604434afcc7eada4d558ae39",
+    "narHash": "sha256-BLkAMrredPJd8jm2SLVWVoVU7nDtgHRkKRGX7ApElZU=",
+    "lastModified": 1795290819
   },
   "ncro": {
     "type": "github",
     "owner": "manic-systems",
     "repo": "ncro",
-    "rev": "f4f0f1e47388edb04fe5a31193c6f475b9662be6",
-    "narHash": "sha256-GCzOJ0BG5VZQX129Q8MXXDBHAihfceV62AjL3JhVdaA=",
-    "lastModified": 1794839722,
+    "rev": "b6d6396faa8de1cc0b84ba823a5ee2f369a0595a",
+    "narHash": "sha256-m93+qwpVxFF+EFQNv3b7bnInbY+B6qkHj+X3OmpJS0U=",
+    "lastModified": 1795351307,
     "public": true
   },
   "nh": {
@@ -187,9 +187,9 @@
     "type": "github",
     "owner": "unnamed-systems",
     "repo": "nix-secrets",
-    "rev": "c451d665f43c0edb7402d8699714956e6509b002",
-    "narHash": "sha256-MIltvL1t7PQsZhrqJHkBCSxHyuXVcZq6wls0ahIQB/4=",
-    "lastModified": 1795264911,
+    "rev": "be3ce57ffaa4ad372b983928906344da592579a3",
+    "narHash": "sha256-xwQP4fLPmXt67fMc5BaSKgrfsaSbv8tR+Z7kTSn6OqY=",
+    "lastModified": 1795379759,
     "public": true
   },
   "nixos-core": {
@@ -252,9 +252,9 @@
     "type": "git",
     "url": "https://git.sable.moe/SableClient/sable-next",
     "ref": "HEAD",
-    "rev": "a7597b8d5b3cea3dc4f22d6d312dfab8443287d8",
-    "narHash": "sha256-wB47Hsv1HDkAiDrkWREtuncLqrQIP6zdhi7sAlHA6Nc=",
-    "lastModified": 1795195734
+    "rev": "d43c1eb8b57da58fc60252550a73030c0decea51",
+    "narHash": "sha256-LdnPFhYhLnmCZm/pgiWRvk/WeFqCqECqUOwqCb3oofQ=",
+    "lastModified": 1795377779
   },
   "super-secret": {
     "type": "github",
