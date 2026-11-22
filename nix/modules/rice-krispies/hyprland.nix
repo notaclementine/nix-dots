@@ -51,6 +51,7 @@
             hyprland-uwsm.desktop
           '';
           "uwsm/env-hyprland".text = ''
+            export HYPRLAND_NO_SD_VARS=1
             systemctl --user import-environment XDG_SESSION_ID
           '';
         };

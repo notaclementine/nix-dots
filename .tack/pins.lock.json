@@ -152,9 +152,9 @@
     "type": "github",
     "owner": "hyprwm",
     "repo": "hyprland",
-    "rev": "6d6e935c3a0397483c75c4b689c15bde37c66cab",
-    "narHash": "sha256-WZgGL56f23aF8Rk8vySvgEcn5c74tnbrwE/No7j2l1k=",
-    "lastModified": 1795277919,
+    "rev": "423da96907feb3eef7ca4e06dc5cb69e9eec63a8",
+    "narHash": "sha256-Aw+xpiBtW4M1qLzdMXt2yflv8BYOX/J/6R2UZmiNfZo=",
+    "lastModified": 1795358162,
     "public": true
   },
   "lix": {
