@@ -10,6 +10,7 @@
       anju-config
       anju-disko
       anju-hardware
+      anju-media
       clementine-headless
       headless
       limine
