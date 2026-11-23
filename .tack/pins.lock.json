@@ -49,9 +49,9 @@
     "type": "git",
     "url": "https://codeberg.org/wvhulle/bootvine",
     "ref": "HEAD",
-    "rev": "958cfa1b54451a7481f315de76bcf5a4400e2793",
-    "narHash": "sha256-sRE3N7Wl1M3kQ2v9UX+skYbG3GK+fQ9JANn9MjJV5ZQ=",
-    "lastModified": 1795177966
+    "rev": "0e7acf85f85084b30c681658a4b8fc1c3a90b0a3",
+    "narHash": "sha256-YZhRJqsSuwA/Xh5RSELzVh1j7q9d+gwCc4iQs6cd4J0=",
+    "lastModified": 1795417174
   },
   "brewery": {
     "type": "git",
@@ -65,9 +65,9 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "cade",
-    "rev": "ae2aa77f9442209261535c4ee53a67e946ca482d",
-    "narHash": "sha256-aaqCFYAXcq59Cl5yo73ERoJqOHDdPqvO2Qfg307hyuc=",
-    "lastModified": 1794993519,
+    "rev": "d1eb4fa146cc9a6ab08a636868bf1d830b327bd4",
+    "narHash": "sha256-OthKDEs7meVsVSD2I53cJfm2GzwPWzc/3JCBCNLBzdc=",
+    "lastModified": 1795426417,
     "public": true
   },
   "circus": {
@@ -109,9 +109,9 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "dix",
-    "rev": "4393ae5f0e97247cf405adaac105d589b2701548",
-    "narHash": "sha256-AzKMQaSXPCdOo2w+/XnrP5y56u+vGMf4fvdZ75bEv0Q=",
-    "lastModified": 1794820078,
+    "rev": "ad70f41e8e6ed5af42031791b55bf5d0dfe272eb",
+    "narHash": "sha256-QK9/Lzys1pqsgJPcIAre8jTkRKRTjQMhRIYQGrVjTTo=",
+    "lastModified": 1795426425,
     "public": true
   },
   "fenix": {
@@ -135,9 +135,9 @@
     "type": "github",
     "owner": "feel-co",
     "repo": "hjem",
-    "rev": "2a28f37d253ea3866f85eabe482c68a84fc32ed5",
-    "narHash": "sha256-IjFbnKzAkaG+tiZxwpP5CfTYVNxKKYSMioLynWAaGd0=",
-    "lastModified": 1795054265,
+    "rev": "414dbed9d65167f7a062d6292fe24eaf3f359ac7",
+    "narHash": "sha256-m0Dmp18AtrsD+X4HXRQ/jfEU7jg89P+7kjUf+Raz0t0=",
+    "lastModified": 1795415752,
     "public": true
   },
   "hjem-rum": {
@@ -162,9 +162,9 @@
     "type": "git",
     "url": "https://git.lix.systems/lix-project/lix",
     "ref": "HEAD",
-    "rev": "feedf4a098afbbc1604434afcc7eada4d558ae39",
-    "narHash": "sha256-BLkAMrredPJd8jm2SLVWVoVU7nDtgHRkKRGX7ApElZU=",
-    "lastModified": 1795290819
+    "rev": "99c2aad67c5764417e20e9da97dbd6b591748d08",
+    "narHash": "sha256-Em6gNgC4HJYy6hQAMfBv5FVpijnA62E4p0G+Jy6c9VI=",
+    "lastModified": 1795435306
   },
   "ncro": {
     "type": "github",
@@ -245,9 +245,9 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "rom",
-    "rev": "7a98f50fc43d49a79593921949af4a371c7f6245",
-    "narHash": "sha256-+izvynt3lFxNAfgXpBfhju1C8EnAvaLT2kHBIJ3Baek=",
-    "lastModified": 1795168959,
+    "rev": "ab5c939947814cbf7ca3a183f3b44c591a8b307b",
+    "narHash": "sha256-CLGVIRoBr4OC+W2JQULUfapLqGXeqrYa7q4e7l5L3MA=",
+    "lastModified": 1795423207,
     "public": true
   },
   "rust-analyzer": {
@@ -262,9 +262,9 @@
     "type": "git",
     "url": "https://git.sable.moe/SableClient/sable-next",
     "ref": "HEAD",
-    "rev": "d43c1eb8b57da58fc60252550a73030c0decea51",
-    "narHash": "sha256-LdnPFhYhLnmCZm/pgiWRvk/WeFqCqECqUOwqCb3oofQ=",
-    "lastModified": 1795377779
+    "rev": "d484a5c37ecfac70e627714d7af670660eed5c64",
+    "narHash": "sha256-quQmrpwEnqHVWIgox9gCzOk5NB1mADKo4T6Kp8kScSY=",
+    "lastModified": 1795424009
   },
   "super-secret": {
     "type": "github",
@@ -284,9 +284,9 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "tack",
-    "rev": "1424edc27b6e6f6d4f216410e0a2cc1419d96cb7",
-    "narHash": "sha256-z7m16oDAtHsgbBX6gadOpa6pGPXNEahjwyzPC0pbLvM=",
-    "lastModified": 1795064133,
+    "rev": "a992d76e8e9c906a3714b596ba3a9b8386a817d6",
+    "narHash": "sha256-u6gAZW/m9HnyiI/QpupurIB0L3SRUsBDRvrCrJp5EMU=",
+    "lastModified": 1795391791,
     "public": true
   },
   "vicinae": {
