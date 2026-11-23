@@ -187,9 +187,9 @@
     "type": "github",
     "owner": "unnamed-systems",
     "repo": "nix-secrets",
-    "rev": "be3ce57ffaa4ad372b983928906344da592579a3",
-    "narHash": "sha256-xwQP4fLPmXt67fMc5BaSKgrfsaSbv8tR+Z7kTSn6OqY=",
-    "lastModified": 1795379759,
+    "rev": "6cd0e31794dce50f3f84f197558d0cd067f59a6f",
+    "narHash": "sha256-yKt1FQlLIG+pH+EJ3ARKon4sR0XkVaTpyxRv2Iy2Erk=",
+    "lastModified": 1795437558,
     "public": true
   },
   "nixos-core": {
