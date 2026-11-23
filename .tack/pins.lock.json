@@ -162,35 +162,35 @@
     "type": "git",
     "url": "https://git.lix.systems/lix-project/lix",
     "ref": "HEAD",
-    "rev": "99c2aad67c5764417e20e9da97dbd6b591748d08",
-    "narHash": "sha256-Em6gNgC4HJYy6hQAMfBv5FVpijnA62E4p0G+Jy6c9VI=",
-    "lastModified": 1795435306
+    "rev": "fd0ce6c617ee0437082deef72f93bddaa329906b",
+    "narHash": "sha256-b7GTGiY3YT54wQLq4wFNshtiz9pdgpkn69jaQdwjxg0=",
+    "lastModified": 1795444479
   },
   "ncro": {
     "type": "github",
     "owner": "manic-systems",
     "repo": "ncro",
-    "rev": "b6d6396faa8de1cc0b84ba823a5ee2f369a0595a",
-    "narHash": "sha256-m93+qwpVxFF+EFQNv3b7bnInbY+B6qkHj+X3OmpJS0U=",
-    "lastModified": 1795351307,
+    "rev": "f973c8888dbd53334e2c42a782af43bb65e8b2fd",
+    "narHash": "sha256-KYLLZofXDLakJYZS5UjOO3vEt7D6w2HLSqFV4jBTR1M=",
+    "lastModified": 1795462421,
     "public": true
   },
   "nh": {
     "type": "github",
     "owner": "nix-community",
     "repo": "nh",
-    "rev": "b8ae601b28b5c656397bbfc261c29ded7e2f40bf",
-    "narHash": "sha256-oFYpl3bUnZbWgEBG1Q90J+lUBKAXLjDoUA74+9nEfPM=",
-    "lastModified": 1795281741,
+    "rev": "461190efa562062652ac6f5099baec2930cf3b4a",
+    "narHash": "sha256-pCD4Bum5qPWLExSbftdq0Mi0ff0rtjMeHa4wW4wyyN4=",
+    "lastModified": 1795457887,
     "public": true
   },
   "nix-secrets": {
     "type": "github",
     "owner": "unnamed-systems",
     "repo": "nix-secrets",
-    "rev": "6cd0e31794dce50f3f84f197558d0cd067f59a6f",
-    "narHash": "sha256-yKt1FQlLIG+pH+EJ3ARKon4sR0XkVaTpyxRv2Iy2Erk=",
-    "lastModified": 1795437558,
+    "rev": "837a8f06a8b6d819149e15a1d2782dd32a354810",
+    "narHash": "sha256-ULXB9cWnPQ7MNY4rmy4VTYNRozLOS93KDPV63Txpi8s=",
+    "lastModified": 1795452146,
     "public": true
   },
   "nixdg-ninja": {
@@ -262,9 +262,9 @@
     "type": "git",
     "url": "https://git.sable.moe/SableClient/sable-next",
     "ref": "HEAD",
-    "rev": "d484a5c37ecfac70e627714d7af670660eed5c64",
-    "narHash": "sha256-quQmrpwEnqHVWIgox9gCzOk5NB1mADKo4T6Kp8kScSY=",
-    "lastModified": 1795424009
+    "rev": "5588af29bfb9a892e644f2b1d3f78d67ecd3ce0b",
+    "narHash": "sha256-2QJsLSVdvw9JTN7TcRqqY25VBQbk7Gt1xclVyRZ/WYM=",
+    "lastModified": 1795448937
   },
   "super-secret": {
     "type": "github",
@@ -284,9 +284,9 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "tack",
-    "rev": "a992d76e8e9c906a3714b596ba3a9b8386a817d6",
-    "narHash": "sha256-u6gAZW/m9HnyiI/QpupurIB0L3SRUsBDRvrCrJp5EMU=",
-    "lastModified": 1795391791,
+    "rev": "35c1c4cb2653226de6bf7744d648549592ad341a",
+    "narHash": "sha256-sHc/kJwHpMcszaBMniAMAp5CiUEIph6pb49pQ6Amag8=",
+    "lastModified": 1795458252,
     "public": true
   },
   "vicinae": {
