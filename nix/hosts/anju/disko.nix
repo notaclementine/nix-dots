@@ -22,12 +22,18 @@
       };
     };
 
+    # my master plan
     /*
-    fileSystems."/swimming-pool" = {
-      device = "UUID=";
-      fsType = "bcachefs";
-      options = ["noatime" "nofail" "x-systemd.device-timeout=30s"];
-    };
+    the ssd will have about 345 GB of storage for the bcachefs pool
+    2x 16TB hdd's will also join the pool
+    default to promote off
+    nix cache will have promote on
+
+        fileSystems."/swimming-pool" = {
+          device = "UUID=";
+          fsType = "bcachefs";
+          options = ["noatime" "nofail" "x-systemd.device-timeout=30s"];
+        };
     */
   };
 }

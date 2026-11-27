@@ -19,12 +19,15 @@
       cores = 4;
       http-connections = 100;
       max-jobs = 4;
-      secret-key-files = [config.security.nix-secrets.secrets."nix-cache-key".path];
+      #secret-key-files = [config.security.nix-secrets.secrets."nix-cache-key".path];
     };
     programs.nh.flake = "/persistent/dotfiles";
     security.nix-secrets.enable = lib.mkForce false; #identityPaths = ["/persistent/keys/age-identity.txt"];
     services = {
-      openssh.settings.PasswordAuthentication = false; # force login to only yubikey
+      openssh = {
+        settings.PasswordAuthentication = false; # force login to only yubikey
+        openFirewall = lib.mkForce true; # temp
+      };
       caddy = {
         enable = true;
         globalConfig = ''
